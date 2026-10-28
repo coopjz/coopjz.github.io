@@ -9,18 +9,20 @@ function Prompt() {
 }
 
 function Welcome() {
+  const [degree, university] = site.owner.undergraduate.split(' @ ');
+
   return (
     <div className="welcome">
       <pre className="ascii-avatar" aria-label="Character portrait of Junzhe Wang, based on his GitHub avatar" role="img">{avatar.trimEnd().split('\n').map((line, index) => <span className={index >= 19 ? 'avatar-shirt' : undefined} key={index}>{line}{'\n'}</span>)}</pre>
       <div className="welcome-profile">
-      <h1>Welcome to {site.owner.name}'s Homepage!</h1>
-      <div className="welcome-divider" aria-hidden="true">----</div>
-      <p>{site.owner.name} <span className="text-separator">|</span> {site.owner.tagline}</p>
-      <p>{site.owner.undergraduate}</p>
-      <p><span className="field-label">Research:</span> {site.owner.bio}</p>
-      <div className="welcome-divider" aria-hidden="true">----</div>
-      <div className="welcome-contact"><span>Email: <a href={site.links.email}>{site.links.email.replace('mailto:', '')}</a></span><span className="contact-separator" aria-hidden="true"> | </span><span>GitHub: <a href={site.links.github} target="_blank" rel="noreferrer">github.com/{site.owner.handle}</a></span></div>
-      <div className="welcome-divider" aria-hidden="true">----</div>
+        <h1>Welcome to {site.owner.name}'s Homepage!</h1>
+        <div className="welcome-divider" aria-hidden="true">----</div>
+        <p>{site.owner.name} <span className="text-separator">|</span> {site.owner.tagline}</p>
+        <p className="education-line"><span>{degree}</span>{' '}<span>@ {university}</span></p>
+        <p><span className="field-label">Research:</span> {site.owner.bio}</p>
+        <div className="welcome-divider" aria-hidden="true">----</div>
+        <div className="welcome-contact"><span>Email: <a href={site.links.email}>{site.links.email.replace('mailto:', '')}</a></span><span className="contact-separator" aria-hidden="true"> | </span><span>GitHub: <a href={site.links.github} target="_blank" rel="noreferrer">github.com/{site.owner.handle}</a></span></div>
+        <div className="welcome-divider" aria-hidden="true">----</div>
       </div>
     </div>
   );

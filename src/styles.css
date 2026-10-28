@@ -49,6 +49,8 @@ button:disabled { cursor: default; }
 .ascii-avatar .avatar-shirt { color: #dfca85; }
 .welcome h1 { font-size: 14px; font-weight: 500; line-height: 1.8; margin: 0; }
 .welcome p { margin: 0; overflow-wrap: anywhere; }
+.welcome .education-line { display: flex; flex-wrap: wrap; gap: 0 1ch; margin-block: 5px; }
+.education-line > span { max-width: 100%; overflow-wrap: normal; text-wrap: pretty; }
 .welcome-divider { color: #68798b; margin: 9px 0; line-height: 1.2; }
 .text-separator { color: #6f8193; }
 .field-label { color: #b6c5d7; }
@@ -142,6 +144,7 @@ button:disabled { cursor: default; }
   .welcome { margin-top: 22px; gap: 20px; }
   .welcome h1 { font-size: 12px; }
   .welcome p { margin-bottom: 6px; }
+  .education-line > span + span { padding-left: 2ch; text-indent: -2ch; }
   .help-hint { line-height: 1.9; }
   .terminal-input-row { flex-wrap: wrap; gap: 0 8px; }
   .terminal-input-row > .prompt { width: 100%; }

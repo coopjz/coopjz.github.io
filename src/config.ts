@@ -7,9 +7,9 @@ export const site = {
     name: 'Junzhe Wang',
     handle: 'coopjz',
     tagline: 'MPhil Student @ The Hong Kong Polytechnic University',
-    undergraduate: 'BEng in Computer Engineering @ HKUST',
+    undergraduate: 'BEng in Computer Engineering @ The Hong Kong University of Science and Technology',
     bio: 'Spatial Intelligence · Vision-Language Navigation · Robot Localization',
-    about: ['Junzhe Wang', 'MPhil Student @ The Hong Kong Polytechnic University', 'BEng in Computer Engineering @ HKUST', 'Research: Spatial Intelligence, Vision-Language Navigation, and Robot Localization.'],
+    about: ['Junzhe Wang', 'MPhil Student @ The Hong Kong Polytechnic University', 'BEng in Computer Engineering @ The Hong Kong University of Science and Technology', 'Research: Spatial Intelligence, Vision-Language Navigation, and Robot Localization.'],
   },
   links: {
     github: 'https://github.com/coopjz',
