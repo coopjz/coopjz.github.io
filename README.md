@@ -1,6 +1,6 @@
-# cedricluo.github.io
+# coopjz.github.io
 
-个人网站：React + Vite + TypeScript 纯静态站点，agnoster 终端风主页 + Markdown 博客，GitHub Actions 自动部署到 GitHub Pages。
+个人网站：React + Vite + TypeScript 纯静态站点，可交互终端主页 + Markdown 博客，GitHub Actions 自动部署到 GitHub Pages。
 
 ## 本地开发
 
@@ -10,6 +10,8 @@ npm run dev      # 本地预览（热更新）
 npm run build    # 构建 + TS 检查
 npm run preview  # 预览构建产物
 ```
+
+博客目前暂时关闭；需要恢复时，将 `src/config.ts` 中的 `features.blog` 改为 `true`。
 
 ## 写博客
 
@@ -30,7 +32,7 @@ push 到 `main` 后自动发布，列表按日期倒序。
 
 ## 修改个人信息
 
-编辑 `src/config.ts`：姓名、简介、社交链接、主页终端里模拟执行的命令和输出。
+编辑 `src/config.ts`：姓名、当前身份、研究方向、GitHub 和邮箱。主页直接展示个人信息；终端支持 help、whoami、about、blog、github、ls、pwd、clear，以及 ↑/↓ 历史、Tab 补全、Ctrl+L 清屏。
 
 ## 部署到 GitHub Pages
 

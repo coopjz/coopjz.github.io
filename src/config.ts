@@ -1,43 +1,19 @@
-/**
- * 全站个人信息配置 —— 改内容只需编辑这个文件和 src/posts/ 下的 Markdown。
- */
-
-export interface TerminalScriptLine {
-  cmd: string;
-  output: string[];
-}
-
+/** Basic profile only, based on the resume. */
 export const site = {
-  title: 'Cedric Luo',
-  description: "Cedric Luo's personal website & blog",
+  features: { blog: false },
+  title: 'Junzhe Wang',
+  description: 'Junzhe Wang · MPhil student at The Hong Kong Polytechnic University. Spatial intelligence, vision-language navigation, and robot localization.',
   owner: {
-    name: 'Cedric Luo',
-    tagline: 'Developer · Open Source Enthusiast',
-    about: [
-      '你好，我是 Cedric。这里是我的个人网站，记录我感兴趣的技术、项目和想法。',
-      '把 src/config.ts 里的这段文字换成你自己的介绍即可。',
-    ],
+    name: 'Junzhe Wang',
+    handle: 'coopjz',
+    tagline: 'MPhil Student @ The Hong Kong Polytechnic University',
+    undergraduate: 'BEng in Computer Engineering @ HKUST',
+    bio: 'Spatial Intelligence · Vision-Language Navigation · Robot Localization',
+    about: ['Junzhe Wang', 'MPhil Student @ The Hong Kong Polytechnic University', 'BEng in Computer Engineering @ HKUST', 'Research: Spatial Intelligence, Vision-Language Navigation, and Robot Localization.'],
   },
   links: {
-    github: 'https://github.com/cedricluo',
-    email: 'mailto:hi@example.com',
+    github: 'https://github.com/coopjz',
+    email: 'mailto:cooper.wang@connect.polyu.hk',
   },
-  terminal: {
-    user: 'cedric',
-    host: 'blog',
-    script: [
-      { cmd: 'whoami', output: ['Cedric Luo'] },
-      {
-        cmd: 'cat about.txt',
-        output: [
-          'Developer · Open Source Enthusiast',
-          '写代码，写博客，偶尔开源。',
-        ],
-      },
-      {
-        cmd: 'ls ~/links',
-        output: ['github.com/cedricluo', 'hi@example.com'],
-      },
-    ] as TerminalScriptLine[],
-  },
+  terminal: { user: 'visitor', host: 'coopjz' },
 };

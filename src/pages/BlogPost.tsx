@@ -12,7 +12,7 @@ export default function BlogPost() {
   return (
     <article className="page post-page">
       <Link to="/blog" className="back-link">
-        ← cd ../
+        ← All posts
       </Link>
       <h1 className="post-title">{post.title}</h1>
       <div className="post-meta">

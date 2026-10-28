@@ -27,4 +27,4 @@ console.log(greet('world'));
 
 > 好的工具应该消失在背景里，让你专注于内容本身。
 
-更多内容请见 [我的 GitHub](https://github.com/cedricluo)。
+更多内容请见 [我的 GitHub](https://github.com/coopjz)。
