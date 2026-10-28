@@ -6,16 +6,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: publish-homepage
   cancel-in-progress: false
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,19 +22,30 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - uses: actions/configure-pages@v5
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/checkout@v4
         with:
-          path: dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          ref: master
+          path: .pages
+      - name: Publish static files to the existing Pages branch
+        run: |
+          git -C .pages rm -rq --ignore-unmatch .
+          cp -a dist/. .pages/
+          touch .pages/.nojekyll
+          git -C .pages config user.name 'github-actions[bot]'
+          git -C .pages config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C .pages add -A
+          if ! git -C .pages diff --cached --quiet; then
+            git -C .pages commit -qm "Deploy homepage from ${GITHUB_SHA}"
+            git -C .pages push origin HEAD:master
+          fi
+      - name: Request Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl --fail-with-body --silent --show-error \
+            --request POST \
+            --header "Authorization: Bearer ${GH_TOKEN}" \
+            --header 'Accept: application/vnd.github+json' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds"
