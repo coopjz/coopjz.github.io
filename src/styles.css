@@ -43,7 +43,10 @@ button:disabled { cursor: default; }
 .prompt-user { color: var(--green); }
 .prompt-path { color: #9abce4; }
 .welcome-command, .history-command { display: flex; align-items: baseline; gap: 8px; }
-.ascii-banner { display: block; font: 500 17px/1.2 var(--mono); letter-spacing: 0; white-space: pre; color: #9abce4; margin: 30px 0; width: max-content; max-width: 100%; }
+.welcome { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: 32px; margin-top: 26px; }
+.welcome-profile { min-width: 0; }
+.ascii-avatar { font: 400 12px/1.12 var(--mono); font-variant-ligatures: none; letter-spacing: 0; white-space: pre; color: #c5d2e0; margin: 0; user-select: all; }
+.ascii-avatar .avatar-shirt { color: #dfca85; }
 .welcome h1 { font-size: 14px; font-weight: 500; line-height: 1.8; margin: 0; }
 .welcome p { margin: 0; overflow-wrap: anywhere; }
 .welcome-divider { color: #68798b; margin: 9px 0; line-height: 1.2; }
@@ -115,6 +118,9 @@ button:disabled { cursor: default; }
 .markdown-body th, .markdown-body td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
 .markdown-body hr { border: 0; border-top: 1px solid var(--border); margin: 30px 0; }
 @media (max-width: 900px) {
+  .welcome { grid-template-columns: 1fr; gap: 24px; }
+  .welcome-profile { grid-row: 1; }
+  .ascii-avatar { justify-self: center; }
   .welcome-contact { flex-direction: column; }
   .contact-separator { display: none; }
 }
@@ -123,7 +129,6 @@ button:disabled { cursor: default; }
   .nav { padding-block: 21px; }.nav-links { gap: 20px; }
   .main { padding-block: 14px 30px; }
   .terminal-body { padding: 24px; font-size: 12px; }
-  .ascii-banner { font-size: 15px; }
   .welcome h1 { font-size: 13px; }
   .help-grid { grid-template-columns: 1fr; }
   .post-card { gap: 16px; }.post-card-title { font-size: 18px; }
@@ -133,7 +138,8 @@ button:disabled { cursor: default; }
   .nav-logo { font-size: 12px; }.nav-links { font-size: 11px; gap: 15px; }
   .terminal-body { padding: 21px 16px; font-size: 11px; }
   .terminal-title { font-size: 10px; }
-  .ascii-banner { font-size: clamp(10px, 2.7vw, 13px); margin: 27px 0; }
+  .ascii-avatar { font-size: clamp(10px, 2.8vw, 12px); }
+  .welcome { margin-top: 22px; gap: 20px; }
   .welcome h1 { font-size: 12px; }
   .welcome p { margin-bottom: 6px; }
   .help-hint { line-height: 1.9; }

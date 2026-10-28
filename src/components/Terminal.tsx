@@ -2,21 +2,17 @@ import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent, type R
 import { Link, useNavigate } from 'react-router-dom';
 import { site } from '../config';
 import { posts } from '../lib/posts';
+import avatar from '../../public/avatar.txt?raw';
 
 function Prompt() {
   return <span className="prompt" aria-hidden="true"><span className="prompt-user">{site.terminal.user}@{site.terminal.host}</span><span>:<span className="prompt-path">~</span>$</span></span>;
 }
 
-const banner = String.raw`  ____ ___   ___  ____      _ _____
- / ___/ _ \ / _ \|  _ \    | |__  /
-| |  | | | | | | | |_) |_  | | / /
-| |__| |_| | |_| |  __/| |_| |/ /_
- \____\___/ \___/|_|    \___//____|`;
-
 function Welcome() {
   return (
     <div className="welcome">
-      <pre className="ascii-banner" aria-label="coopjz" role="img">{banner}</pre>
+      <pre className="ascii-avatar" aria-label="Character portrait of Junzhe Wang, based on his GitHub avatar" role="img">{avatar.trimEnd().split('\n').map((line, index) => <span className={index >= 19 ? 'avatar-shirt' : undefined} key={index}>{line}{'\n'}</span>)}</pre>
+      <div className="welcome-profile">
       <h1>Welcome to {site.owner.name}'s Homepage!</h1>
       <div className="welcome-divider" aria-hidden="true">----</div>
       <p>{site.owner.name} <span className="text-separator">|</span> {site.owner.tagline}</p>
@@ -25,6 +21,7 @@ function Welcome() {
       <div className="welcome-divider" aria-hidden="true">----</div>
       <div className="welcome-contact"><span>Email: <a href={site.links.email}>{site.links.email.replace('mailto:', '')}</a></span><span className="contact-separator" aria-hidden="true"> | </span><span>GitHub: <a href={site.links.github} target="_blank" rel="noreferrer">github.com/{site.owner.handle}</a></span></div>
       <div className="welcome-divider" aria-hidden="true">----</div>
+      </div>
     </div>
   );
 }
