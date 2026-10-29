@@ -77,6 +77,13 @@ button:disabled { cursor: default; }
 .experience-item { padding-left: 14px; border-left: 1px solid #536373; }
 .experience-item h2 { color: var(--fg); font-size: 13px; font-weight: 500; line-height: 1.6; margin: 0 0 3px; }
 .experience-item p { color: #b0becf; margin: 0; }
+.api-easter-egg { width: min(100%, 560px); margin-top: 4px; padding: 13px 16px 15px; border: 1px solid #394349; border-radius: 4px; background: #171d21; }
+.api-easter-egg-header { display: flex; align-items: center; gap: 9px; padding-bottom: 10px; border-bottom: 1px solid #2e383e; color: var(--muted); font-size: 11px; }
+.api-easter-egg-mark { display: grid; place-items: center; width: 22px; height: 22px; flex: 0 0 22px; border: 1px solid #536373; border-radius: 50%; color: var(--green); }
+.api-easter-egg-status { margin-left: auto; color: #c9a66b; font-size: 10px; }
+.api-easter-egg p { margin: 15px 0 12px; color: var(--fg); }
+.api-easter-egg button { border: 1px solid #536373; border-radius: 3px; padding: 4px 10px; background: transparent; color: var(--muted); }
+.api-easter-egg button:hover { border-color: var(--green); color: var(--green); }
 .terminal-input-row { display: flex; align-items: center; gap: 8px; min-height: 34px; margin-top: auto; cursor: text; }
 .terminal-input-row input { min-width: 0; flex: 1; width: 100%; border: 0; padding: 5px 0; background: transparent; color: var(--fg); line-height: 1.8; caret-color: var(--green); border-radius: 0; outline: none; }
 .terminal-input-row:focus-within { box-shadow: 0 1px 0 #9fcca330; }
@@ -152,6 +159,9 @@ button:disabled { cursor: default; }
   .nav, .main, .footer { width: calc(100% - 28px); }
   .nav-logo { font-size: 12px; }.nav-links { font-size: 11px; gap: 15px; }
   .terminal-body { padding: 21px 16px; font-size: 11px; }
+  .api-easter-egg { padding: 11px; }
+  .api-easter-egg-header { font-size: 10px; }
+  .api-easter-egg-status { font-size: 9px; }
   .terminal { min-height: 62svh; }
   .terminal-title { font-size: 10px; }
   .ascii-avatar { font-size: clamp(10px, 2.8vw, 12px); }

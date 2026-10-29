@@ -29,6 +29,19 @@ function Welcome() {
   );
 }
 
+function ApiEasterEgg({ agent }: { agent: 'claude' | 'codex' }) {
+  const [declined, setDeclined] = useState(false);
+  const label = agent === 'claude' ? 'CLAUDE' : 'CODEX';
+
+  return (
+    <div className="api-easter-egg">
+      <div className="api-easter-egg-header"><span className="api-easter-egg-mark" aria-hidden="true">$</span><span>{label} ACCESS PORTAL</span><span className="api-easter-egg-status">{declined ? 'CLOSED' : 'UNAUTHORIZED'}</span></div>
+      <p>{declined ? '拒绝成功。你的 API 还在你手里。' : '交出你的api'}</p>
+      {!declined && <button type="button" onClick={() => setDeclined(true)}>拒绝</button>}
+    </div>
+  );
+}
+
 const commands = ['welcome', 'help', 'whoami', 'about', 'experience', 'github', 'linkedin', 'email', 'ls', 'pwd', 'clear', 'cat about.md', 'cat experience.md', 'cat links', ...(site.features.blog ? ['blog', 'ls ~/blog', 'cd ~/blog'] : [])];
 interface Entry { command: string; output: ReactNode }
 
@@ -88,6 +101,10 @@ export default function Terminal() {
       case 'experience': case 'cat experience.md':
         setShowWelcome(false);
         output = <div className="experience-list">{site.owner.experience.map((item) => <section className="experience-item" key={item.title}><h2>{item.title}</h2><p>{item.text}</p></section>)}</div>;
+        break;
+      case 'claude': case 'codex':
+        setShowWelcome(false);
+        output = <ApiEasterEgg agent={normalized as 'claude' | 'codex'} />;
         break;
       case 'github': output = <a href={site.links.github} target="_blank" rel="noreferrer">{site.links.github.replace('https://', '')}</a>; break;
       case 'linkedin': output = <a href={site.links.linkedin} target="_blank" rel="noreferrer">{site.links.linkedin.replace('https://www.', '').replace(/\/$/, '')}</a>; break;
