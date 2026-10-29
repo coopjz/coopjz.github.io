@@ -30,14 +30,34 @@ function Welcome() {
 }
 
 function ApiEasterEgg({ agent }: { agent: 'claude' | 'codex' }) {
-  const [declined, setDeclined] = useState(false);
-  const label = agent === 'claude' ? 'CLAUDE' : 'CODEX';
+  const [choice, setChoice] = useState<'shared' | 'kept' | null>(null);
+  const isClaude = agent === 'claude';
+  const label = isClaude ? 'Claude Code' : 'Codex';
 
   return (
-    <div className="api-easter-egg">
-      <div className="api-easter-egg-header"><span className="api-easter-egg-mark" aria-hidden="true">$</span><span>{label} ACCESS PORTAL</span><span className="api-easter-egg-status">{declined ? 'CLOSED' : 'UNAUTHORIZED'}</span></div>
-      <p>{declined ? '拒绝成功。你的 API 还在你手里。' : '交出你的api'}</p>
-      {!declined && <button type="button" onClick={() => setDeclined(true)}>拒绝</button>}
+    <div className={`agent-demo ${isClaude ? 'agent-demo-claude' : 'agent-demo-codex'}`}>
+      <aside className="agent-sidebar" aria-label={`${label} workspace`}>
+        <div className="agent-brand"><span className="agent-brand-mark" aria-hidden="true">{isClaude ? '✳' : '◈'}</span><span>{label}</span><span className="agent-sidebar-menu" aria-hidden="true">···</span></div>
+        <div className="agent-sidebar-label">WORKSPACE</div>
+        <div className="agent-workspace"><span aria-hidden="true">⌘</span> junzhe-wang <span className="agent-chevron">⌄</span></div>
+        <div className="agent-sidebar-label agent-recent-label">RECENT</div>
+        <div className="agent-recent"><span aria-hidden="true">◌</span> New conversation</div>
+        <div className="agent-sidebar-bottom"><span className="agent-avatar">JW</span><span>Junzhe Wang</span><span className="agent-sidebar-menu" aria-hidden="true">···</span></div>
+      </aside>
+      <div className="agent-main">
+        <header className="agent-topbar"><span>New conversation <span className="agent-chevron">⌄</span></span><span className="agent-model">{isClaude ? 'Claude Sonnet' : 'Codex'} <span className="agent-chevron">⌄</span></span></header>
+        <div className="agent-conversation">
+          <div className="agent-greeting"><span className="agent-greeting-mark" aria-hidden="true">{isClaude ? '✳' : '◈'}</span><h2>{choice ? 'All set.' : 'How can I help you today?'}</h2></div>
+          <div className="agent-user-message">Can you help me with this project?</div>
+          <div className="agent-assistant-message"><span className="agent-message-mark" aria-hidden="true">{isClaude ? '✳' : '◈'}</span><div><p>I can help with that. First, one tiny question...</p>
+            <div className="agent-permission"><div className="agent-permission-title"><span aria-hidden="true">{isClaude ? '✳' : '◈'}</span> A small access request</div><p>{choice === 'shared' ? 'Nice try. This was a demo. Never paste API keys into a website.' : choice === 'kept' ? 'Good call. Your API key stays yours. Now, what are we building?' : '交出你的api'}</p>
+              {!choice && <div className="agent-actions"><button type="button" className="agent-share" onClick={() => setChoice('shared')}>交出 API</button><button type="button" className="agent-keep" onClick={() => setChoice('kept')}>拒绝</button></div>}
+            </div>
+          </div></div>
+          <div className="agent-composer"><span>Message {label}...</span><button type="button" disabled aria-label="Send message">↑</button></div>
+          <div className="agent-demo-note">Demo only · No API keys are requested or stored</div>
+        </div>
+      </div>
     </div>
   );
 }
