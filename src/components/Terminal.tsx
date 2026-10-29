@@ -29,7 +29,7 @@ function Welcome() {
   );
 }
 
-const commands = ['welcome', 'help', 'whoami', 'about', 'github', 'linkedin', 'email', 'ls', 'pwd', 'clear', 'cat about.md', 'cat links', ...(site.features.blog ? ['blog', 'ls ~/blog', 'cd ~/blog'] : [])];
+const commands = ['welcome', 'help', 'whoami', 'about', 'experience', 'github', 'linkedin', 'email', 'ls', 'pwd', 'clear', 'cat about.md', 'cat experience.md', 'cat links', ...(site.features.blog ? ['blog', 'ls ~/blog', 'cd ~/blog'] : [])];
 interface Entry { command: string; output: ReactNode }
 
 export default function Terminal() {
@@ -78,13 +78,16 @@ export default function Terminal() {
       case 'welcome': setShowWelcome(true); setEntries([]); return;
       case 'help':
         output = <div className="help-grid">{[
-          ['welcome', 'Show welcome'], ['whoami', 'Name & affiliation'], ['about', 'Basic profile'],
+          ['welcome', 'Show welcome'], ['whoami', 'Name & affiliation'], ['about', 'Basic profile'], ['experience', 'Research & engineering path'],
           ...(site.features.blog ? [['blog', 'Read the blog']] : []), ['github', 'GitHub profile'], ['linkedin', 'LinkedIn profile'], ['email', 'Get in touch'],
           ['ls', 'List files'], ['pwd', 'Current directory'], ['clear', 'Clear terminal'],
         ].map(([cmd, description]) => <span key={cmd}><button type="button" onClick={() => execute(cmd)}>{cmd}</button><span>{description}</span></span>)}<p>↑ / ↓ history · Tab autocomplete · Esc dismiss / reset · Ctrl + L clear</p></div>;
         break;
       case 'whoami': output = `${site.owner.name}\n${site.owner.tagline}\n${site.owner.undergraduate}`; break;
       case 'about': case 'cat about.md': case 'cat about.txt': output = site.owner.about.join('\n'); break;
+      case 'experience': case 'cat experience.md':
+        output = <div className="experience-list">{site.owner.experience.map((item) => <section className="experience-item" key={item.title}><h2>{item.title}</h2><p>{item.text}</p></section>)}</div>;
+        break;
       case 'github': output = <a href={site.links.github} target="_blank" rel="noreferrer">{site.links.github.replace('https://', '')}</a>; break;
       case 'linkedin': output = <a href={site.links.linkedin} target="_blank" rel="noreferrer">{site.links.linkedin.replace('https://www.', '').replace(/\/$/, '')}</a>; break;
       case 'email': output = <EmailContact />; break;
@@ -96,10 +99,10 @@ export default function Terminal() {
       case 'ls ~/blog': case 'ls blog':
         if (!site.features.blog) { output = 'No such directory.'; break; }
         output = <div className="terminal-posts">{posts.map((post) => <Link key={post.slug} to={`/blog/${post.slug}`}>{post.title}</Link>)}</div>; break;
-      case 'ls': output = <div className="terminal-files"><button onClick={() => execute('about')}>about.md</button>{site.features.blog && <button onClick={() => execute('ls ~/blog')}>blog/</button>}<button onClick={() => execute('cat links')}>links</button></div>; break;
+      case 'ls': output = <div className="terminal-files"><button onClick={() => execute('about')}>about.md</button><button onClick={() => execute('experience')}>experience.md</button>{site.features.blog && <button onClick={() => execute('ls ~/blog')}>blog/</button>}<button onClick={() => execute('cat links')}>links</button></div>; break;
       case 'pwd': output = `/home/${site.terminal.user}`; break;
       case 'clear': clear(); return;
-      case 'cat': output = 'Usage: cat about.md or cat links'; break;
+      case 'cat': output = 'Usage: cat about.md, cat experience.md, or cat links'; break;
       default: output = <span>Command not found: {command}. Type <button className="inline-command" onClick={() => execute('help')}>help</button> for available commands.</span>;
     }
     setEntries((previous) => [...previous, { command, output }].slice(-50));

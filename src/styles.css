@@ -73,6 +73,10 @@ button:disabled { cursor: default; }
 .terminal-entry { margin-bottom: 22px; }
 .history-command { flex-wrap: wrap; }
 .term-out { color: #b0becf; margin-top: 7px; white-space: pre-wrap; }
+.experience-list { display: grid; gap: 17px; max-width: 760px; }
+.experience-item { padding-left: 14px; border-left: 1px solid #536373; }
+.experience-item h2 { color: var(--fg); font-size: 13px; font-weight: 500; line-height: 1.6; margin: 0 0 3px; }
+.experience-item p { color: #b0becf; margin: 0; }
 .terminal-input-row { display: flex; align-items: center; gap: 8px; min-height: 34px; cursor: text; }
 .terminal-input-row input { min-width: 0; flex: 1; width: 100%; border: 0; padding: 5px 0; background: transparent; color: var(--fg); line-height: 1.8; caret-color: var(--green); border-radius: 0; outline: none; }
 .terminal-input-row:focus-within { box-shadow: 0 1px 0 #9fcca330; }
