@@ -86,6 +86,7 @@ export default function Terminal() {
       case 'whoami': output = `${site.owner.name}\n${site.owner.tagline}\n${site.owner.undergraduate}`; break;
       case 'about': case 'cat about.md': case 'cat about.txt': output = site.owner.about.join('\n'); break;
       case 'experience': case 'cat experience.md':
+        setShowWelcome(false);
         output = <div className="experience-list">{site.owner.experience.map((item) => <section className="experience-item" key={item.title}><h2>{item.title}</h2><p>{item.text}</p></section>)}</div>;
         break;
       case 'github': output = <a href={site.links.github} target="_blank" rel="noreferrer">{site.links.github.replace('https://', '')}</a>; break;

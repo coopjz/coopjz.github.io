@@ -31,14 +31,14 @@ button:disabled { cursor: default; }
 .main { flex: 1; padding-block: 30px 50px; }
 .main:focus { outline: none; }
 .home { max-width: 1020px; margin-inline: auto; }
-.terminal { overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: #10151c; box-shadow: 0 20px 60px -25px #0008; animation: terminal-enter .3s ease-out; }
+.terminal { display: flex; flex-direction: column; min-height: min(76svh, 720px); overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: #10151c; box-shadow: 0 20px 60px -25px #0008; animation: terminal-enter .3s ease-out; }
 @keyframes terminal-enter { from { transform: translateY(5px); } to { transform: none; } }
 .terminal-header { display: flex; align-items: center; position: relative; min-height: 42px; background: #191f28; border-bottom: 1px solid var(--border); padding: 0 17px; }
 .window-dots { display: flex; gap: 7px; }
 .dot { width: 9px; height: 9px; border-radius: 50%; }
 .dot-red { background: #df8178; }.dot-yellow { background: #d9b773; }.dot-green { background: #94b688; }
 .terminal-title { position: absolute; left: 50%; transform: translateX(-50%); color: #a1adba; font-size: 11px; }
-.terminal-body { padding: 28px 34px 30px; font-size: 13px; }
+.terminal-body { display: flex; flex: 1; flex-direction: column; padding: 28px 34px 30px; font-size: 13px; }
 .prompt { display: inline-flex; white-space: nowrap; flex-shrink: 0; font-weight: 500; gap: 0; }
 .prompt-user { color: var(--green); }
 .prompt-path { color: #9abce4; }
@@ -69,7 +69,7 @@ button:disabled { cursor: default; }
 .help-hint button, .inline-command { padding: 0; border: 0; background: transparent; color: var(--green); }
 .help-hint button::before, .help-hint button::after { content: '`'; }
 .help-hint button:hover, .inline-command:hover { text-decoration: underline; text-underline-offset: 4px; }
-.terminal-transcript { max-height: 320px; overflow: auto; scrollbar-width: thin; scrollbar-color: #4d6071 transparent; overflow-wrap: anywhere; }
+.terminal-transcript { overflow: visible; overflow-wrap: anywhere; }
 .terminal-entry { margin-bottom: 22px; }
 .history-command { flex-wrap: wrap; }
 .term-out { color: #b0becf; margin-top: 7px; white-space: pre-wrap; }
@@ -77,7 +77,7 @@ button:disabled { cursor: default; }
 .experience-item { padding-left: 14px; border-left: 1px solid #536373; }
 .experience-item h2 { color: var(--fg); font-size: 13px; font-weight: 500; line-height: 1.6; margin: 0 0 3px; }
 .experience-item p { color: #b0becf; margin: 0; }
-.terminal-input-row { display: flex; align-items: center; gap: 8px; min-height: 34px; cursor: text; }
+.terminal-input-row { display: flex; align-items: center; gap: 8px; min-height: 34px; margin-top: auto; cursor: text; }
 .terminal-input-row input { min-width: 0; flex: 1; width: 100%; border: 0; padding: 5px 0; background: transparent; color: var(--fg); line-height: 1.8; caret-color: var(--green); border-radius: 0; outline: none; }
 .terminal-input-row:focus-within { box-shadow: 0 1px 0 #9fcca330; }
 .execute-button { background: transparent; border: 0; color: var(--green); padding: 2px 8px; font-size: 18px; }
@@ -152,6 +152,7 @@ button:disabled { cursor: default; }
   .nav, .main, .footer { width: calc(100% - 28px); }
   .nav-logo { font-size: 12px; }.nav-links { font-size: 11px; gap: 15px; }
   .terminal-body { padding: 21px 16px; font-size: 11px; }
+  .terminal { min-height: 62svh; }
   .terminal-title { font-size: 10px; }
   .ascii-avatar { font-size: clamp(10px, 2.8vw, 12px); }
   .welcome { margin-top: 22px; gap: 20px; }
