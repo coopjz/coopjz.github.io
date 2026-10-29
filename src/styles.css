@@ -59,6 +59,12 @@ button:disabled { cursor: default; }
 .welcome-contact a, .term-out a { color: #9abce4; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #9abce440; }
 .welcome-contact a:hover, .term-out a:hover { color: #c3ddfa; text-decoration-color: currentColor; }
 .contact-separator { color: #6f8193; }
+.email-contact { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0 5px; max-width: 100%; }
+.email-contact > span { min-width: 0; overflow-wrap: anywhere; }
+.copy-email { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 28px; height: 28px; border: 0; border-radius: 4px; padding: 0; color: var(--muted); background: transparent; vertical-align: middle; }
+.copy-email:hover { color: var(--green); background: #9fcca310; }
+.copy-feedback { flex-basis: 100%; color: var(--muted); font-size: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .help-hint { margin: 17px 0 26px; color: var(--muted); }
 .help-hint button, .inline-command { padding: 0; border: 0; background: transparent; color: var(--green); }
 .help-hint button::before, .help-hint button::after { content: '`'; }
@@ -79,6 +85,9 @@ button:disabled { cursor: default; }
 .help-grid button:hover, .terminal-files button:hover { text-decoration: underline; }
 .help-grid p { grid-column: 1 / -1; margin: 12px 0 0; color: var(--muted); font-size: 12px; }
 .terminal-files { display: flex; flex-wrap: wrap; gap: 20px; }
+.terminal-completions { display: flex; flex-wrap: wrap; gap: 6px 16px; padding-block: 8px; }
+.terminal-completions button { border: 0; background: transparent; padding: 3px 0; color: var(--green); }
+.terminal-completions button:hover { text-decoration: underline; text-underline-offset: 4px; }
 .terminal-posts { display: flex; flex-direction: column; gap: 5px; }
 .footer { padding-block: 20px; color: #8593a4; font-size: 11px; }
 .name-period { color: var(--green); }
