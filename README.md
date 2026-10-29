@@ -17,4 +17,6 @@ Edit basic profile information in `src/config.ts`. Blog pages and Markdown artic
 
 Source code lives on `main`. Push to `main` to build the site and publish the generated static files to `master`, the repository's existing GitHub Pages source branch. The workflow requests a Pages build after publishing. Previous site versions remain available in Git history.
 
+For the complete development and deployment guide, see [`docs/DEVELOPMENT_AND_DEPLOYMENT.md`](docs/DEVELOPMENT_AND_DEPLOYMENT.md).
+
 Live site: https://coopjz.github.io/
