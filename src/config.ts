@@ -13,6 +13,7 @@ export const site = {
   },
   links: {
     github: 'https://github.com/coopjz',
+    linkedin: 'https://www.linkedin.com/in/junzhe-wang-3a218b25a/',
     email: 'mailto:cooper.wang@connect.polyu.hk',
   },
   terminal: { user: 'visitor', host: 'coopjz' },

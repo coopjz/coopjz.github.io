@@ -22,14 +22,14 @@ function Welcome() {
         <p className="education-line"><span>{degree}</span>{' '}<span>@ {university}</span></p>
         <p><span className="field-label">Research:</span> {site.owner.bio}</p>
         <div className="welcome-divider" aria-hidden="true">----</div>
-        <div className="welcome-contact"><EmailContact /><span className="contact-separator" aria-hidden="true"> | </span><span>GitHub: <a href={site.links.github} target="_blank" rel="noreferrer">github.com/{site.owner.handle}</a></span></div>
+        <div className="welcome-contact"><EmailContact /><span className="contact-separator" aria-hidden="true"> | </span><span>GitHub: <a href={site.links.github} target="_blank" rel="noreferrer">github.com/{site.owner.handle}</a></span><span className="contact-separator" aria-hidden="true"> | </span><span>LinkedIn: <a href={site.links.linkedin} target="_blank" rel="noreferrer">linkedin.com/in/junzhe-wang-3a218b25a</a></span></div>
         <div className="welcome-divider" aria-hidden="true">----</div>
       </div>
     </div>
   );
 }
 
-const commands = ['welcome', 'help', 'whoami', 'about', 'github', 'email', 'ls', 'pwd', 'clear', 'cat about.md', 'cat links', ...(site.features.blog ? ['blog', 'ls ~/blog', 'cd ~/blog'] : [])];
+const commands = ['welcome', 'help', 'whoami', 'about', 'github', 'linkedin', 'email', 'ls', 'pwd', 'clear', 'cat about.md', 'cat links', ...(site.features.blog ? ['blog', 'ls ~/blog', 'cd ~/blog'] : [])];
 interface Entry { command: string; output: ReactNode }
 
 export default function Terminal() {
@@ -79,16 +79,17 @@ export default function Terminal() {
       case 'help':
         output = <div className="help-grid">{[
           ['welcome', 'Show welcome'], ['whoami', 'Name & affiliation'], ['about', 'Basic profile'],
-          ...(site.features.blog ? [['blog', 'Read the blog']] : []), ['github', 'GitHub profile'], ['email', 'Get in touch'],
+          ...(site.features.blog ? [['blog', 'Read the blog']] : []), ['github', 'GitHub profile'], ['linkedin', 'LinkedIn profile'], ['email', 'Get in touch'],
           ['ls', 'List files'], ['pwd', 'Current directory'], ['clear', 'Clear terminal'],
         ].map(([cmd, description]) => <span key={cmd}><button type="button" onClick={() => execute(cmd)}>{cmd}</button><span>{description}</span></span>)}<p>↑ / ↓ history · Tab autocomplete · Esc dismiss / reset · Ctrl + L clear</p></div>;
         break;
       case 'whoami': output = `${site.owner.name}\n${site.owner.tagline}\n${site.owner.undergraduate}`; break;
       case 'about': case 'cat about.md': case 'cat about.txt': output = site.owner.about.join('\n'); break;
       case 'github': output = <a href={site.links.github} target="_blank" rel="noreferrer">{site.links.github.replace('https://', '')}</a>; break;
+      case 'linkedin': output = <a href={site.links.linkedin} target="_blank" rel="noreferrer">{site.links.linkedin.replace('https://www.', '').replace(/\/$/, '')}</a>; break;
       case 'email': output = <EmailContact />; break;
       case 'cat links': case 'ls ~/links':
-        output = <><a href={site.links.github} target="_blank" rel="noreferrer">{site.links.github.replace('https://', '')}</a><br /><a href={site.links.email}>{site.links.email.replace('mailto:', '')}</a></>; break;
+        output = <><a href={site.links.github} target="_blank" rel="noreferrer">{site.links.github.replace('https://', '')}</a><br /><a href={site.links.linkedin} target="_blank" rel="noreferrer">{site.links.linkedin.replace('https://www.', '').replace(/\/$/, '')}</a><br /><a href={site.links.email}>{site.links.email.replace('mailto:', '')}</a></>; break;
       case 'blog': case 'cd blog': case 'cd ~/blog': case 'cd /blog':
         if (!site.features.blog) { output = 'No such command or directory.'; break; }
         navigate('/blog'); return;
