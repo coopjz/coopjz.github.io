@@ -192,11 +192,13 @@ export default function Terminal() {
     <section className="terminal" aria-label="Interactive terminal">
       <div className="terminal-header"><div className="window-dots" aria-hidden="true"><span className="dot dot-red" /><span className="dot dot-yellow" /><span className="dot dot-green" /></div><span className="terminal-title">{site.owner.handle} — zsh</span></div>
       <div className="terminal-body" onClick={focusOnBlankClick}>
-        {showWelcome && <><div className="welcome-command"><Prompt /><span>welcome</span></div><Welcome /><p className="help-hint">Type <button onClick={() => { execute('help'); input.current?.focus(); }}>help</button> to see available commands.</p></>}
-        <div className="terminal-transcript" ref={transcript} role="log" aria-label="Command history" aria-live="polite" tabIndex={entries.length ? 0 : -1}>
-          {entries.map((entry, i) => <div className="terminal-entry" key={i}><div className="history-command"><Prompt /><span>{entry.command}</span></div><div className="term-out">{entry.output}</div></div>)}
+        <div className="terminal-scroll" ref={transcript} role="log" aria-label="Terminal content" aria-live="polite" tabIndex={entries.length ? 0 : -1}>
+          {showWelcome && <><div className="welcome-command"><Prompt /><span>welcome</span></div><Welcome /><p className="help-hint">Type <button onClick={() => { execute('help'); input.current?.focus(); }}>help</button> to see available commands.</p></>}
+          <div className="terminal-transcript">
+            {entries.map((entry, i) => <div className="terminal-entry" key={i}><div className="history-command"><Prompt /><span>{entry.command}</span></div><div className="term-out">{entry.output}</div></div>)}
+          </div>
+          {completions.length > 0 && <div className="terminal-completions" role="group" aria-label="Command suggestions">{completions.map((command) => <button type="button" key={command} onClick={() => complete(command)}>{command}</button>)}</div>}
         </div>
-        {completions.length > 0 && <div className="terminal-completions" role="group" aria-label="Command suggestions">{completions.map((command) => <button type="button" key={command} onClick={() => complete(command)}>{command}</button>)}</div>}
         <form className="terminal-input-row" onSubmit={submit} onClick={() => input.current?.focus()}>
           <Prompt />
           <input ref={input} aria-label="Terminal command" type="text" value={value} onChange={(event) => { setValue(event.target.value); setCompletions([]); setHistoryIndex(-1); }} onKeyDown={onKeyDown} autoComplete="off" autoCapitalize="off" spellCheck={false} enterKeyHint="send" />
