@@ -1,0 +1,49 @@
+# Installation template. Install at .github/workflows/feed-refresh.yml on master
+# only after the feature has been released and activation is authorized.
+name: Refresh public research feed
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: publish-homepage
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          path: .pages
+      - run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Refresh data with previous-source fallback
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: bash scripts/refresh_pages_feed.sh .pages
+      - name: Commit only feed data
+        run: |
+          git -C .pages config user.name 'github-actions[bot]'
+          git -C .pages config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C .pages add -- feed.json
+          if ! git -C .pages diff --cached --quiet; then
+            git -C .pages commit -m "Refresh public research feed"
+            git -C .pages push origin HEAD:master
+          fi
+      - name: Request Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl --fail-with-body --silent --show-error --retry 3 \
+            --request POST \
+            --header "Authorization: Bearer ${GH_TOKEN}" \
+            --header 'Accept: application/vnd.github+json' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds"

@@ -14,7 +14,11 @@ Items are deduplicated by canonical URL, including arXiv version suffix removal.
 
 Each normal deployment or manual dispatch of the existing Deploy to GitHub Pages workflow copies `master`'s last published `feed.json`, refreshes sources, runs parser tests, then builds and deploys. A source failure preserves that source's old entries and marks them stale. A first-run source failure has no fabricated fallback data. UI displays an honest empty state or warning.
 
-No daily schedule has been enabled. GitHub cron workflows run on the default branch, which is currently `master`, while this repository keeps workflow source on `main`. Merely adding a cron trigger on `main` would not work. A future schedule can use an authorized external scheduler to dispatch the existing workflow on `main`; setup and publication require separate review. Do not change the repository's default branch silently.
+The daily scheduler is prepared in `.github/scheduled/feed-refresh.yml`, but **not installed or active**. After release and explicit activation, install this template as `.github/workflows/feed-refresh.yml` on `master`, the unchanged default branch. It runs daily at 03:17 UTC (11:17 Hong Kong), reads the source script from `main`, and updates only `master/feed.json`. It shares the deployment concurrency lock. The normal deployment preserves `.github/**` so it cannot erase the scheduler. No PAT or third-party scheduler is needed.
+
+Activation must wait until the feature is released. Installing the workflow requires a workflow-authorized connector/user action; do not assume the Actions token can create workflow files. After installation, run a manual workflow dispatch, verify the resulting commit and Pages build, then verify the first scheduled run. These live steps have not been performed because the website must remain unpublished.
+
+The refresh helper refuses to publish empty data or a result where all sources failed. Individual-source failures retain earlier content. CI dry-runs the same helper against a temporary Pages checkout and asserts only `feed.json` changed; it also verifies deployment cleanup retains the scheduler. GitHub scheduled runs may be delayed or dropped during load, and public-repository schedules may be disabled after 60 days without activity. This is daily best-effort refresh, not a real-time SLA. See https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule.
 
 ## Checks
 

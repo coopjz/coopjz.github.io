@@ -37,7 +37,7 @@ jobs:
       - run: npm run build
       - name: Publish static files to the existing Pages branch
         run: |
-          git -C .pages rm -rq --ignore-unmatch .
+          git -C .pages rm -rq --ignore-unmatch -- . ':(exclude).github/**'
           cp -a dist/. .pages/
           touch .pages/.nojekyll
           git -C .pages config user.name 'github-actions[bot]'

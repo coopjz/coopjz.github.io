@@ -25,6 +25,27 @@ jobs:
           python3 -m http.server 4173 --bind 127.0.0.1 --directory dist > /tmp/feed-server.log 2>&1 &
           for i in $(seq 1 20); do curl -fsS http://127.0.0.1:4173/ >/dev/null && break; sleep 1; done
           node tests/feed-browser.mjs
+      - name: Dry-run the scheduled refresh without publishing
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mkdir .feed-dry-run
+          git -C .feed-dry-run init -q
+          cp public/feed.json .feed-dry-run/feed.json
+          printf 'unchanged homepage' > .feed-dry-run/index.html
+          mkdir -p .feed-dry-run/.github/workflows
+          cp .github/scheduled/feed-refresh.yml .feed-dry-run/.github/workflows/feed-refresh.yml
+          git -C .feed-dry-run add .
+          git -C .feed-dry-run -c user.name=test -c user.email=test@example.invalid commit -qm baseline
+          bash scripts/refresh_pages_feed.sh .feed-dry-run
+          test "$(git -C .feed-dry-run diff --name-only)" = 'feed.json'
+          test "$(cat .feed-dry-run/index.html)" = 'unchanged homepage'
+          cmp .github/scheduled/feed-refresh.yml .feed-dry-run/.github/workflows/feed-refresh.yml
+          git -C .feed-dry-run add feed.json
+          git -C .feed-dry-run -c user.name=test -c user.email=test@example.invalid commit -qm refresh
+          git -C .feed-dry-run rm -rq --ignore-unmatch -- . ':(exclude).github/**'
+          test -f .feed-dry-run/.github/workflows/feed-refresh.yml
+          echo 'PASS: actual refresh changes only feed.json; deployment cleanup preserves scheduler.'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
