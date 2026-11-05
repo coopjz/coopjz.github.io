@@ -29,7 +29,7 @@ export default function Feed() {
   return <section className="feed" lang="zh-CN">
     <p className="feed-eyebrow">~/feed</p><h1>Research feed</h1>
     <p className="feed-intro">机器人、空间智能与 Agent 的论文、资讯和开源项目。摘要来自原始来源，不是 AI 生成的评论。</p>
-    <div className="feed-controls" aria-label="内容分类">{categories.map(([key, label]) => <button key={key} type="button" aria-pressed={category === key} onClick={() => setParams(key === 'all' ? {} : { type: key })}>{label}</button>)}</div>
+    <div className="feed-controls" aria-label="内容分类">{categories.map(([key, label]) => <button key={key} type="button" aria-pressed={category === key} onClick={() => { if (category !== key) setParams(key === 'all' ? {} : { type: key }); }}>{label}</button>)}</div>
     <label className="feed-search">搜索标题、摘要或来源<input value={query} onChange={e => setQuery(e.target.value)} type="search" placeholder="例如 navigation / world model" /></label>
     {error ? <p role="alert">暂时无法读取 feed。<button onClick={() => setAttempt(attempt + 1)}>重试</button></p> : !data ? <p role="status">正在读取…</p> : <>
       <p className="feed-meta">{data.updatedAt ? `最近抓取：${new Date(data.updatedAt).toLocaleString('zh-CN')} · ` : ''}{items.length} 条内容 · 自动筛选，非人工推荐</p>
