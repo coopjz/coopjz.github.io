@@ -1,6 +1,7 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import Feed from './pages/Feed';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import { site } from './config';
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="feed" element={<Feed />} />
           {site.features.blog && <Route path="blog" element={<BlogList />} />}
           {site.features.blog && <Route path="blog/:slug" element={<BlogPost />} />}
           <Route path="*" element={<Home />} />
@@ -20,3 +22,4 @@ export default function App() {
     </HashRouter>
   );
 }
+

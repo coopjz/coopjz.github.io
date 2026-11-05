@@ -1,0 +1,1358 @@
+{
+  "updatedAt": "2026-11-05T09:41:31.956649+00:00",
+  "sources": [
+    {
+      "name": "arXiv cs.RO",
+      "status": "ok",
+      "checkedAt": "2026-11-05T09:41:31.956649+00:00"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "status": "ok",
+      "checkedAt": "2026-11-05T09:41:31.956649+00:00"
+    },
+    {
+      "name": "Google DeepMind",
+      "status": "stale",
+      "checkedAt": "2026-11-05T09:40:47.487692+00:00",
+      "error": "ParseError"
+    },
+    {
+      "name": "GitHub",
+      "status": "ok",
+      "checkedAt": "2026-11-05T09:41:31.956649+00:00"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://github.com/questdb/questdb",
+      "url": "https://github.com/questdb/questdb",
+      "title": "questdb/questdb",
+      "summary": "QuestDB is a high performance, open-source, time-series database",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2014-04-28T23:29:15Z",
+      "updatedAt": "2026-11-05T09:41:37Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/autonomous-ai/openharness",
+      "url": "https://github.com/autonomous-ai/openharness",
+      "title": "autonomous-ai/openharness",
+      "summary": "The ultimate harness for coding agents and beyond. All your agents. All your machines. One command center. Start with code, then follow your curiosity and build across disciplines: CAD, circuits, robots, games and music.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2026-08-04T07:53:15Z",
+      "updatedAt": "2026-11-05T09:40:38Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/rerun-io/rerun",
+      "url": "https://github.com/rerun-io/rerun",
+      "title": "rerun-io/rerun",
+      "summary": "Visualize, query, and stream to train on multimodal robotics data.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2022-04-08T07:30:05Z",
+      "updatedAt": "2026-11-05T09:39:17Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/googlecloudrobotics/core",
+      "url": "https://github.com/googlecloudrobotics/core",
+      "title": "googlecloudrobotics/core",
+      "summary": "Cloud Robotics Core: Kubernetes, Federation, App Management",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2019-02-04T09:16:31Z",
+      "updatedAt": "2026-11-05T09:37:51Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/geekscape/aiko_services",
+      "url": "https://github.com/geekscape/aiko_services",
+      "title": "geekscape/aiko_services",
+      "summary": "Distributed service framework using asynchronous messages supporting IoT, Machine Learning and Video",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2020-03-02T04:06:53Z",
+      "updatedAt": "2026-11-05T09:37:51Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/cerulion-inc/cerulion",
+      "url": "https://github.com/cerulion-inc/cerulion",
+      "title": "cerulion-inc/cerulion",
+      "summary": "The open-source robot runtime that records a run, re-executes it against new code, and returns an exit code.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2024-07-09T07:53:42Z",
+      "updatedAt": "2026-11-05T09:37:42Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/zapplyjobs/New-Grad-Hardware-Engineering-Jobs-2027",
+      "url": "https://github.com/zapplyjobs/New-Grad-Hardware-Engineering-Jobs-2027",
+      "title": "zapplyjobs/New-Grad-Hardware-Engineering-Jobs-2027",
+      "summary": "2027 entry-level hardware engineering jobs — EE, embedded systems & robotics US roles",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2025-08-13T20:29:23Z",
+      "updatedAt": "2026-11-05T09:37:37Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/DexForce/EmbodiChain",
+      "url": "https://github.com/DexForce/EmbodiChain",
+      "title": "DexForce/EmbodiChain",
+      "summary": "An end-to-end, GPU-accelerated, and modular platform for building generalized Embodied Intelligence.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2025-10-24T17:25:38Z",
+      "updatedAt": "2026-11-05T09:37:33Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/rokbenko/quackd",
+      "url": "https://github.com/rokbenko/quackd",
+      "title": "rokbenko/quackd",
+      "summary": "One CLI for all your robots. Connect them, command them, and let them work together, each with an LLM for a brain (Claude, OpenAI, Gemini, Grok, or local via Ollama or vLLM), VLAs for arms and decision LLMs (Jev, Laya, Kev). Drives Microduck, Open Duck Mini, LeRobot, XLeRobot, AlohaMini, ToddlerBot, or any ROS 2 base from a laptop, offboard.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2026-08-28T09:09:16Z",
+      "updatedAt": "2026-11-05T09:37:27Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/muellerberndt/cadence",
+      "url": "https://github.com/muellerberndt/cadence",
+      "title": "muellerberndt/cadence",
+      "summary": "A brain that learns from live experience. System 1 by default: perception, memory, plasticity and action. Optional System 2 for self-observation and slow corrections.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2026-09-07T10:20:11Z",
+      "updatedAt": "2026-11-05T09:35:21Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/Positronic-Robotics/positronic",
+      "url": "https://github.com/Positronic-Robotics/positronic",
+      "title": "Positronic-Robotics/positronic",
+      "summary": "Python-native stack for real-life ML robotics",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2025-02-14T16:36:50Z",
+      "updatedAt": "2026-11-05T09:32:02Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/RobotWebTools/roslibjs",
+      "url": "https://github.com/RobotWebTools/roslibjs",
+      "title": "RobotWebTools/roslibjs",
+      "summary": "The Standard ROS JavaScript Library",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2013-03-15T00:50:47Z",
+      "updatedAt": "2026-11-05T09:31:04Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/commaai/openpilot",
+      "url": "https://github.com/commaai/openpilot",
+      "title": "commaai/openpilot",
+      "summary": "openpilot is an operating system for robotics. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2016-11-24T01:33:30Z",
+      "updatedAt": "2026-11-05T09:26:36Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "title": "google-deepmind/mujoco",
+      "summary": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2021-08-27T12:25:48Z",
+      "updatedAt": "2026-11-05T09:26:34Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/gereon-t/trajectopy",
+      "url": "https://github.com/gereon-t/trajectopy",
+      "title": "gereon-t/trajectopy",
+      "summary": "Trajectopy - Trajectory Evaluation in Python",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2023-07-18T14:55:20Z",
+      "updatedAt": "2026-11-05T09:21:32Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/mosaico-labs/mosaico",
+      "url": "https://github.com/mosaico-labs/mosaico",
+      "title": "mosaico-labs/mosaico",
+      "summary": "Mosaico - The data platform for Physical AI",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2025-12-09T13:28:50Z",
+      "updatedAt": "2026-11-05T09:19:50Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/RobotLocomotion/drake",
+      "url": "https://github.com/RobotLocomotion/drake",
+      "title": "RobotLocomotion/drake",
+      "summary": "Model-based design and verification for robotics.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2014-01-26T16:11:05Z",
+      "updatedAt": "2026-11-05T09:16:09Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/AsterisCrack/BipedRobot",
+      "url": "https://github.com/AsterisCrack/BipedRobot",
+      "title": "AsterisCrack/BipedRobot",
+      "summary": "Biped robot locomotion with deep RL: Isaac Lab + MuJoCo, custom PPO/SAC/DDPG/D4PG/MPO, MLP/LSTM/Transformer, motion imitation, sim-to-real",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2022-07-26T16:05:39Z",
+      "updatedAt": "2026-11-05T09:07:59Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/dora-rs/dora",
+      "url": "https://github.com/dora-rs/dora",
+      "title": "dora-rs/dora",
+      "summary": "DORA (Dataflow-Oriented Robotic Architecture) is middleware designed to streamline and simplify the creation of AI-based robotic applications. It offers low latency, composable, and distributed dataflow capabilities. Applications are modeled as directed graphs, also referred to as pipelines.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2022-02-17T21:33:07Z",
+      "updatedAt": "2026-11-05T09:06:53Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/jannikmi/extremitypathfinder",
+      "url": "https://github.com/jannikmi/extremitypathfinder",
+      "title": "jannikmi/extremitypathfinder",
+      "summary": "python package for fast shortest path computation on 2D polygon or grid maps",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2018-09-23T13:27:12Z",
+      "updatedAt": "2026-11-05T09:01:32Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/ai4s-research/awesome-vision-language-action",
+      "url": "https://github.com/ai4s-research/awesome-vision-language-action",
+      "title": "ai4s-research/awesome-vision-language-action",
+      "summary": "A curated list of Vision-Language-Action (VLA) models for robotics and embodied AI — foundation models, architectures, benchmarks, datasets, focused on 2025–2026.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2026-06-28T12:27:02Z",
+      "updatedAt": "2026-11-05T08:53:00Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/kornia/kornia",
+      "url": "https://github.com/kornia/kornia",
+      "title": "kornia/kornia",
+      "summary": "🐍 Geometric Computer Vision Library for Spatial AI",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2018-08-22T10:31:37Z",
+      "updatedAt": "2026-11-05T08:48:06Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/sou350121/VLA-Handbook",
+      "url": "https://github.com/sou350121/VLA-Handbook",
+      "title": "sou350121/VLA-Handbook",
+      "summary": "本项目旨在为致力于进入VLA(Vision-Language-Action)领域的算法工程师提供一份全中文、实战导向的学习/面试手册。 不同于通用的 CV/NLP 面试指南，本项目聚焦于 Robotics 特有的挑战",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2025-11-23T06:25:26Z",
+      "updatedAt": "2026-11-05T08:41:16Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/TingdeLiu/tingdeliu.github.io",
+      "url": "https://github.com/TingdeLiu/tingdeliu.github.io",
+      "title": "TingdeLiu/tingdeliu.github.io",
+      "summary": "Research notes on embodied AI, vision-language navigation, and robot learning — paper surveys, in-depth readings, and engineering practice.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2026-01-04T08:05:28Z",
+      "updatedAt": "2026-11-05T08:35:19Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/JdeRobot/RoboticsAcademy",
+      "url": "https://github.com/JdeRobot/RoboticsAcademy",
+      "title": "JdeRobot/RoboticsAcademy",
+      "summary": "Learn Robotics with JdeRobot",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2015-07-23T12:50:24Z",
+      "updatedAt": "2026-11-05T08:14:55Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/harvard-edge/cs249r_book",
+      "url": "https://github.com/harvard-edge/cs249r_book",
+      "title": "harvard-edge/cs249r_book",
+      "summary": "Machine Learning Systems: Foundations, Scaling, Agentic AI, and Physical AI (Vols I–IV) • Harvard CS249r | https://mlsysbook.ai",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2023-09-06T19:31:06Z",
+      "updatedAt": "2026-11-05T08:10:40Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/isaac-sim/IsaacLab",
+      "url": "https://github.com/isaac-sim/IsaacLab",
+      "title": "isaac-sim/IsaacLab",
+      "summary": "Unified framework for robot learning with multi-physics/renderer support",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2022-11-16T23:55:13Z",
+      "updatedAt": "2026-11-05T08:09:43Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/limxdynamics/limxdynamics",
+      "url": "https://github.com/limxdynamics/limxdynamics",
+      "title": "limxdynamics/limxdynamics",
+      "summary": "Official home of the LimX Dynamics open-source ecosystem — humanoid robots, legged robots, locomotion & manipulation, and embodied AI.",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2024-09-04T10:31:49Z",
+      "updatedAt": "2026-11-05T07:54:03Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/reductstore/reductstore",
+      "url": "https://github.com/reductstore/reductstore",
+      "title": "reductstore/reductstore",
+      "summary": "High-performance, time-indexed object storage for robotics and industrial IoT",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2021-12-23T21:27:52Z",
+      "updatedAt": "2026-11-05T07:53:54Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://github.com/eProsima/Fast-DDS",
+      "url": "https://github.com/eProsima/Fast-DDS",
+      "title": "eProsima/Fast-DDS",
+      "summary": "The most complete DDS - Proven: Plenty of success cases. Looking for commercial support? Contact info@eprosima.com",
+      "category": "project",
+      "source": "GitHub",
+      "publishedAt": "2014-05-29T14:36:15Z",
+      "updatedAt": "2026-11-05T07:49:29Z",
+      "summaryType": "仓库描述"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05448",
+      "url": "https://arxiv.org/abs/2611.05448",
+      "title": "Jev with Foresight: Safe Language-Guided Autonomous Driving via a Language World Model",
+      "summary": "arXiv:2611.05448v1 Announce Type: new Abstract: Large language models understand passengers' driving commands, but as driving agents they reason in generated text for seconds and must infer each action's consequences implicitly from the scene. We present Jev-AD, which pairs Jev, a typed decision model that answers predefined questions with probabilities, not generated text, with a language world model that predicts f",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05567",
+      "url": "https://arxiv.org/abs/2611.05567",
+      "title": "MESA: An Evaluation Framework for Compositional, Semantic, and Spatial Generalization in Robotics",
+      "summary": "arXiv:2611.05567v1 Announce Type: new Abstract: Despite growing interest in foundation models for robotic manipulation, systematic evaluation of their capabilities remains elusive. Existing benchmarks are either narrow and saturated, offering little signal on SOTA methods, broadly scoped, providing diversity at the cost of controlled experimentation, or require training on large, messy open-source datasets. We introd",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05571",
+      "url": "https://arxiv.org/abs/2611.05571",
+      "title": "ELA: End-to-End Latent Action Policy Learning from Video Demonstrations",
+      "summary": "arXiv:2611.05571v1 Announce Type: new Abstract: Robot imitation learning is limited by the scarcity of action-labeled data, while action-free demonstrations such as videos are abundant. Recent latent-action methods learn action-relevant representations from observation transitions, but they do not optimize latent actions for downstream control, leading to latent representations that are difficult for policies to mode",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05585",
+      "url": "https://arxiv.org/abs/2611.05585",
+      "title": "Contact-Implicit Whole-Body Trajectory Optimization for Dynamic Humanoid Locomotion on Parameterizable Uneven Terrain",
+      "summary": "arXiv:2611.05585v1 Announce Type: new Abstract: This letter presents a trajectory planner for humanoid robots to perform dynamic motions on complex, parameterizable terrains using a contact-implicit whole-body optimization framework. The planner generates feasible movements without predefined contact sequences, considering the robot's full dynamics and kinematics. To plan bipedal locomotion on steps, ramps, and other",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05615",
+      "url": "https://arxiv.org/abs/2611.05615",
+      "title": "$\\mathcal{C}^\\infty$ Smooth Trajectory Planning with Application to Soft Robots",
+      "summary": "arXiv:2611.05615v1 Announce Type: new Abstract: High motion performance and avoiding structural vibrations rely on smooth trajectory planning. The smoothness requirement depends on the robot's complexity in terms of the number of degrees of freedom and system order due to the flexibility of the joints and links. For industrial robots, the smoothness requirements have been determined and subsequently taken into accoun",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05667",
+      "url": "https://arxiv.org/abs/2611.05667",
+      "title": "Correct Robots Before They Make Mistakes: Proactive Human-in-the-Loop Intervention via Preference Learning",
+      "summary": "arXiv:2611.05667v1 Announce Type: new Abstract: This paper presents Proactive Human-in-the-Loop (PHIL), a framework for proactive policy correction and preference-based post-training. PHIL enables operators to preview policy-predicted future motion and intervene before anticipated undesirable actions. During takeover, PHIL continues querying the policy and displaying its predicted trajectories in the physical workspa",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05738",
+      "url": "https://arxiv.org/abs/2611.05738",
+      "title": "OdorSpaces: Visual-Olfactory Embodied Navigation in 3D Environments",
+      "summary": "arXiv:2611.05738v1 Announce Type: new Abstract: Olfaction provides critical information about airborne chemical cues, yet it remains largely underexplored in embodied AI, with limited prior machine olfaction work focusing primarily on semantic odor perception. We introduce OdorSpaces, a physics-based simulation platform and benchmark for visual-olfactory embodied navigation. OdorSpaces augments Habitat-Sim with 3D od",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05754",
+      "url": "https://arxiv.org/abs/2611.05754",
+      "title": "GRASP: Gradient-Guided Sampling for Contact-Rich Physics-Based Motion Retargeting",
+      "summary": "arXiv:2611.05754v1 Announce Type: new Abstract: We study physics-based retargeting of human demonstrations for robot learning: finding robot controls that reproduce reference motions under contact dynamics. We propose GRASP (Gradient Recovery from Archived Samples for Proposals), which combines sampling-based exploration with gradient-guided refinement without requiring a differentiable simulator. GRASP-TO extends te",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05776",
+      "url": "https://arxiv.org/abs/2611.05776",
+      "title": "Closed-Loop Adaptive Sampling on a Generative Ocean Model",
+      "summary": "arXiv:2611.05776v1 Announce Type: new Abstract: Adaptive sampling can substantially improve the value of sparse ocean observations by directing mobile robots toward measurements that are most informative for an evolving environment. Recent learned generative ocean models can produce high-resolution forecasts and ensembles at substantially lower computational cost than traditional numerical models, creating an opportu",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05838",
+      "url": "https://arxiv.org/abs/2611.05838",
+      "title": "RACE: Calibrated Cumulative Scoring for Rollout-Free Robot Policy Checkpoint Selection",
+      "summary": "arXiv:2611.05838v1 Announce Type: new Abstract: Assessing the deployment performance of learned robot policies during training is challenging, as directly measuring task success requires costly real-world trials for each candidate checkpoint. Averaged validation loss offers a rollout-free alternative, but its checkpoint rankings can be inconsistent with deployment performance. We analyze two limitations of this crite",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05847",
+      "url": "https://arxiv.org/abs/2611.05847",
+      "title": "Time-to-Goal: Learned Temporal Metrics for Long-Horizon Planning with JEPA World Models",
+      "summary": "arXiv:2611.05847v1 Announce Type: new Abstract: Joint-Embedding Predictive Architectures (JEPAs) support planning by comparing predicted latent states with an encoded goal. For this comparison to guide temporal progress, states closer in time to the goal should receive lower costs. However, training representations for prediction and distribution regularization does not directly enforce this ordering. We examine this",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05897",
+      "url": "https://arxiv.org/abs/2611.05897",
+      "title": "FWIK: Multi-Waypoint IK Selection via Lookahead Graph Search",
+      "summary": "arXiv:2611.05897v1 Announce Type: new Abstract: An ordered sequence of end-effector poses can give a redundant robot arm multiple valid joint configurations at each waypoint. Inverse kinematics (IK) computes these configurations. Choosing a configuration only for the next waypoint can leave the arm poorly placed for later waypoints. This may increase planned motion time or cause a later planning failure. This paper p",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05929",
+      "url": "https://arxiv.org/abs/2611.05929",
+      "title": "Diversity-Aware Experience Replay via Statistical Leverage Scores",
+      "summary": "arXiv:2611.05929v1 Announce Type: new Abstract: Off-policy deep reinforcement learning trains on random samples from a replay buffer of past experience. In physical robot settings, that buffer is dominated by routine: thousands of near-identical transitions from normal operation, while the rare events that define the edges of the task are rarely sampled. We propose scoring every stored transition by its statistical l",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05936",
+      "url": "https://arxiv.org/abs/2611.05936",
+      "title": "LumiTac: Compact, High-Rate Six-Axis Optical Tactile Sensing for Human-Robot Interaction",
+      "summary": "arXiv:2611.05936v1 Announce Type: new Abstract: Integrating six-axis tactile feedback into robotic interfaces requires compact sensors with accurate load measurement and rapid online reconstruction. This paper presents LumiTac, a low-profile, camera-free optoelectronic tactile sensor combining spatially distributed illumination with spectral encoding. Five photoemitters and five RGBW photoreceivers are mounted on opp",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05979",
+      "url": "https://arxiv.org/abs/2611.05979",
+      "title": "Learning Object-Centric Motion Priors from Human for Robotic Dexterous Manipulation",
+      "summary": "arXiv:2611.05979v1 Announce Type: new Abstract: Manipulating diverse objects with multi-fingered dexterous hands is challenging due to the high dimensionality and complex dynamics. Human-Object Interaction (HOI) datasets provide rich knowledge about task information and embodied interactions. Instead of solely imitating the human demonstrations, our method learns to holistically predict future hand-object states by l",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06121",
+      "url": "https://arxiv.org/abs/2611.06121",
+      "title": "3D Pose Estimation in Projection Space via Pixel-level Visible Light Communication",
+      "summary": "arXiv:2611.06121v1 Announce Type: new Abstract: Projector-based augmented reality enables natural interaction between users and devices by overlaying digital information onto the physical world through projected imagery. A key technical requirement of such systems is accurate positional alignment between the projector and the devices. Pixel-level Visible Light Communication (PVLC) achieves this alignment without exte",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06162",
+      "url": "https://arxiv.org/abs/2611.06162",
+      "title": "A Layered View of LLM Support in Underwater Robotics",
+      "summary": "arXiv:2611.06162v1 Announce Type: new Abstract: This extended abstract discusses a specific and, in our experience, practically relevant role for large language models (LLMs) in underwater robotics. Our main premise is that, in underwater fielding missions, the immediate difficulty is often not the synthesis of new low-level control laws, but the operation of complex robotic systems under limited communications, part",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06184",
+      "url": "https://arxiv.org/abs/2611.06184",
+      "title": "Can Astra Solve RoboMME without Breaking the Bank?",
+      "summary": "arXiv:2611.06184v1 Announce Type: new Abstract: Robotic manipulation often requires remembering information that is no longer visible, such as an object's location before occlusion or the order of a demonstrated action sequence. A large vision-language planner can read this history, but calling it before every action chunk is slow and costly. We present a three-tier system for the RoboMME benchmark. GPT-6 Astra (Syst",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06196",
+      "url": "https://arxiv.org/abs/2611.06196",
+      "title": "Beyond Terminal Constraints: Reliable Robot Control with Learned Safe Sets",
+      "summary": "arXiv:2611.06196v1 Announce Type: new Abstract: Ensuring safety in advanced robot control methods such as Model Predictive Control (MPC) and Reinforcement Learning remains an open challenge. A common approach relies on control-invariant sets, yet their exact computation for nonlinear systems is generally intractable, and numerical approximations compromise theoretical guarantees. In this work, we show that safety doe",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06214",
+      "url": "https://arxiv.org/abs/2611.06214",
+      "title": "Riemannian Optimization-based Whole-body Obstacle Avoidance for Mobile Continuum Robots in Cluttered Environments",
+      "summary": "arXiv:2611.06214v1 Announce Type: new Abstract: Inspired by the coordination of global motion and local shape adaptation in snakes, elephant trunks, and octopus arms, we propose a unified planning and control framework for mobile continuum robots in cluttered and confined environments. Existing approaches often address high-level path planning and local motion control separately, limiting coordinated base-arm motion,",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06308",
+      "url": "https://arxiv.org/abs/2611.06308",
+      "title": "Scale Anchoring via Implicit Semantics and Sequence-Consistent Loop Closure for VGGT-Based SLAM",
+      "summary": "arXiv:2611.06308v1 Announce Type: new Abstract: Feed-forward geometric foundation models enable dense monocular reconstruction without requiring camera calibration, but independently reconstructed submaps can accumulate scale drift, and even a valid revisit can yield an inconsistent cross-submap measurement. We extend VGGT-SLAM 2.0 with fixed-root scale anchoring and short-sequence-assisted direct loop connections. S",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06442",
+      "url": "https://arxiv.org/abs/2611.06442",
+      "title": "TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics",
+      "summary": "arXiv:2611.06442v1 Announce Type: new Abstract: Online reinforcement learning offers an effective approach to precise laboratory manipulation, yet costly real-world demonstrations and limited access to dense process rewards hinder its practical application. We present TwinBridge, a digital twin-driven framework that supplies policy initialization and dense visual rewards for real-world online learning. We construct d",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06447",
+      "url": "https://arxiv.org/abs/2611.06447",
+      "title": "$A^3$-VLA: Automatic Perception-Guided Attention Alignment for Robot Manipulation",
+      "summary": "arXiv:2611.06447v1 Announce Type: new Abstract: Vision-Language-Action Models (VLAs) enable robots to perform manipulation tasks by leveraging Vision-Language Models (VLMs) to process visual observations and language instructions. However, the action prediction objective itself lacks fine-grained task-specific perceptual supervision, making it prone to relying on task-irrelevant visual shortcuts, leading attention aw",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06453",
+      "url": "https://arxiv.org/abs/2611.06453",
+      "title": "Beyond Infraction Scores: Failure-Boundary Profiles for Closed-Loop Evaluation of Driving and Robot Navigation Agents",
+      "summary": "arXiv:2611.06453v1 Announce Type: new Abstract: Closed-loop driving benchmarks in CARLA rank agents by a driving score that multiplies route completion by an infraction penalty. This score does not distinguish an agent that stops in front of an obstacle from one that pushes past it. In a corridor closed by two parked cars, for example, one agent that drives through with contact averages 52.2 on the blocked widths, wh",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06475",
+      "url": "https://arxiv.org/abs/2611.06475",
+      "title": "Robocasa-Mem: Benchmarking Environment and Process Memory in Long-Horizon Mobile Manipulation",
+      "summary": "arXiv:2611.06475v1 Announce Type: new Abstract: In the real world, mobile manipulation robots must perform complex object interactions and make multi-step decisions, often relying on task-relevant information that is no longer observable. However, existing benchmarks provide limited evaluation of such memory-dependent decision-making in mobile manipulation. To address this gap, we introduce RoboCasa-Mem, a new benchm",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06523",
+      "url": "https://arxiv.org/abs/2611.06523",
+      "title": "H^2MARL: Hierarchical Heterogeneous Multi-agent Reinforcement Learning for Humanoid Robot Control",
+      "summary": "arXiv:2611.06523v1 Announce Type: new Abstract: Coordinated whole-body control of humanoid robots remains challenging due to high-dimensional coupled dynamics and substantial physical heterogeneity across joint degrees of freedom (JDoFs). Existing multi-agent reinforcement learning methods either employ coarse agent partitions or directly apply generic heterogeneous-agent algorithms, while hierarchical controllers co",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06564",
+      "url": "https://arxiv.org/abs/2611.06564",
+      "title": "Playing Soccer Like Humans Do: Learning Versatile and Agile Humanoid Soccer via Latent Motion Priors",
+      "summary": "arXiv:2611.06564v1 Announce Type: new Abstract: Humanoid soccer requires a robot to seamlessly combine agile locomotion, ball manipulation, and impact-rich contact dynamics across a continuous, dynamic behavioral spectrum. Yet existing approaches either cover only a limited set of skills, or forego motion priors entirely and produce unnatural behaviors, leaving the combination of a unified skill set and human-like mo",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06588",
+      "url": "https://arxiv.org/abs/2611.06588",
+      "title": "FOSCo-Net: Ego-centric Voxel Completion for Forest LiDAR Occlusions",
+      "summary": "arXiv:2611.06588v1 Announce Type: new Abstract: Ground robots operating in temperate forests suffer from systematic LiDAR occlusions caused by tree trunks, creating persistent blind regions that degrade traversability estimation. In this paper, we propose FOSCo-Net, a self-supervised voxel completion framework that learns to reconstruct occluded geometry from a single scan using temporally accumulated observations as",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06625",
+      "url": "https://arxiv.org/abs/2611.06625",
+      "title": "Dynamic Shape Control of Soft Trunk Robots",
+      "summary": "arXiv:2611.06625v1 Announce Type: new Abstract: Controlling the shape profile of soft trunk robots extends their reach into complex regions of the workspace and enhances their use in practical applications. Recent advances in soft robot design have enabled soft trunk robots to achieve greater flexibility in conforming to complex shapes. Specifically, trunk robots whose geometries are designed as helicoids have been s",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06649",
+      "url": "https://arxiv.org/abs/2611.06649",
+      "title": "SCRUB: Contact-Based Surface-Frame Estimation for Force-Motion Control with an Armless Quadruped",
+      "summary": "arXiv:2611.06649v1 Announce Type: new Abstract: Wiping, sanding, and inspection robots press a sliding tool on a surface with controlled force. Controlling that force needs the surface normal, which is unknown on real-world, unmapped surfaces. Surface-normal estimators can help estimate the surface normal, but they either need a friction model or assume that the instantaneous tool velocity lies along the surface; how",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06653",
+      "url": "https://arxiv.org/abs/2611.06653",
+      "title": "Detecting Silent Action-Interface Mismatch with Calibrated Relational World Models",
+      "summary": "arXiv:2611.06653v1 Announce Type: new Abstract: A robot action can satisfy shape and range constraints yet carry the wrong semantics: axes may be permuted, signs inverted, rotations rescaled, or gripper polarity reversed. We study learned state-action-effect relations as offline contracts for detecting these mismatches and ranking their likely fields. Clean held-out transitions calibrate alarms; a fixed inverse vocab",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06654",
+      "url": "https://arxiv.org/abs/2611.06654",
+      "title": "Compounding Physical RSI: Turning Execution Failure into Inherited Capability",
+      "summary": "arXiv:2611.06654v1 Announce Type: new Abstract: Generalist robot policies are trained on static offline datasets, yet physical manipulation unfolds sequentially across stages. Because a weakness in a downstream stage remains unobservable until the policy passes earlier ones, each resolved bottleneck exposes the next hidden failure mode. This staged structure calls for Recursive Self-Improvement (RSI), in which a poli",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06673",
+      "url": "https://arxiv.org/abs/2611.06673",
+      "title": "Which Physical Tactile Cues Matter for Contact-Rich Imitation Learning? A Controlled Real-Robot Study",
+      "summary": "arXiv:2611.06673v1 Announce Type: new Abstract: Vision-based tactile sensors capture multiple aspects of physical interaction within a single image stream, including contact appearance, geometry, indentation depth, and tangential deformation. However, existing visuo-tactile policies often directly process tactile observations as images, making it difficult to determine which physical cues contribute to policy learnin",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06689",
+      "url": "https://arxiv.org/abs/2611.06689",
+      "title": "Cognitive and Behavioural Effects of Haptic Feedback for ROV Teleoperation in Hazardous Environments",
+      "summary": "arXiv:2611.06689v1 Announce Type: new Abstract: Teleoperating a Remotely Operated Vehicle (ROV) in complex underwater environments presents unique challenges. Dynamic, three dimensional obstacles and unseen water currents pose real risks to expensive robotic hardware in environments in which recovery can be next to impossible. This paper explores the cognitive effects of haptic feedback to improve vehicle safety in s",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06702",
+      "url": "https://arxiv.org/abs/2611.06702",
+      "title": "When to Ask for Help: Uncertainty-Triggered Aerial Refinement for Off-Road Navigation",
+      "summary": "arXiv:2611.06702v1 Announce Type: new Abstract: Heterogeneous air-ground teams can use aerial sensing to address the limited range and viewpoint of ground-vehicle sensors, but deciding when the UGV needs assistance and what information the UAV should collect remains a challenge. This paper presents a planner-conditioned air-ground assistance method that evaluates how uncertain map information affects the UGV's curren",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06710",
+      "url": "https://arxiv.org/abs/2611.06710",
+      "title": "Where Is VLA Inference Time Spent? Bottlenecks and Optimization Interactions Across GPUs",
+      "summary": "arXiv:2611.06710v1 Announce Type: new Abstract: Vision-language-action (VLA) models map camera observations and language instructions to robot actions. However, their large backbones and repeated action generation can make inference take longer than the robot's real-time requirements for its next action. To reduce the load of VLA computations, researchers have proposed multiple optimization approaches, including quan",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06724",
+      "url": "https://arxiv.org/abs/2611.06724",
+      "title": "Dexterous Robotic Hands in the Foundation-Model Era: A Full-Stack Survey of Hardware, Data, Cross-Embodiment Transfer, Learning, and Evaluation",
+      "summary": "arXiv:2611.06724v1 Announce Type: new Abstract: Dexterous robotic hands are increasingly coupled to large-scale human data and foundation models, yet progress in hardware, representation learning and evaluation is often assessed separately. This survey reviews work from January 2024 to early November 2026, with earlier studies included to establish technical lineages. We organize the literature into five interdepende",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06768",
+      "url": "https://arxiv.org/abs/2611.06768",
+      "title": "PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World",
+      "summary": "arXiv:2611.06768v1 Announce Type: new Abstract: Coding agents powered by models such as GPT-6-Astra connect spatial reasoning with executable robot behavior, raising the question of how such agents can produce lasting improvements in robot capabilities from physical interaction. In this work, we study embodied recursive self-improvement (RSI) through real-world exploration, code refinement, and deployment using PyRUA",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06863",
+      "url": "https://arxiv.org/abs/2611.06863",
+      "title": "Rethinking Self-Repair in Code-as-Policy Agents: What Drives Retry Success?",
+      "summary": "arXiv:2611.06863v1 Announce Type: new Abstract: Code-as-policy agents often use execution feedback to retry failed programs. Additional sampling and task guidance can also improve success, leaving the contribution of failure-specific feedback unclear. We study this question in simulated robot manipulation. A fixed lookup selects feedback templates using failure labels and the API variant. A frozen code model generate",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06881",
+      "url": "https://arxiv.org/abs/2611.06881",
+      "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
+      "summary": "arXiv:2611.06881v1 Announce Type: new Abstract: For robots to operate reliably in commercial and industrial applications, they must persistently perform specific tasks with known variations in object shape and pose. We call this Variational Automation (VA) to differentiate these settings from fixed automation. Inspired by recent papers on Agentic Robotics, where pretrained LLM and VLM coding agents combine interpreta",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06908",
+      "url": "https://arxiv.org/abs/2611.06908",
+      "title": "Perceptive Humanoid Motion from Simulation",
+      "summary": "arXiv:2611.06908v1 Announce Type: new Abstract: Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. Some approaches rely on human teleoper",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06913",
+      "url": "https://arxiv.org/abs/2611.06913",
+      "title": "cuRoboV2-Fast: Fast Torque-Limited Collision-Free Motion Planning",
+      "summary": "arXiv:2611.06913v1 Announce Type: new Abstract: We present cuRoboV2-Fast, a GPU-accelerated planner that reduces both planning latency and execution time for collision-free, payload-aware, torque-limited motions. B-spline trajectory optimization reduces the required iterations, while accelerated robot computations and differentiable inverse dynamics reduce refinement cost and accommodate changing payloads. TimeOpt op",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2605.08086",
+      "url": "https://arxiv.org/abs/2605.08086",
+      "title": "Representations of 3D Rotations: Mathematical Foundations and Comparative Analysis",
+      "summary": "arXiv:2605.08086v1 Announce Type: cross Abstract: Rotation representations are foundational in fields such as computer graphics, robotics, and machine learning, where precise and efficient modeling of 3D orientations is critical. This paper comprehensively investigates diverse representations of the special orthogonal group $SO(3)$, such as Euler angles, axis-angle vectors, quaternions, rotation matrices, exponential",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05658",
+      "url": "https://arxiv.org/abs/2611.05658",
+      "title": "Beyond Accuracy: Information-Theoretic Decoder Evaluation Under Latent Intent",
+      "summary": "arXiv:2611.05658v1 Announce Type: cross Abstract: A central challenge in assistive brain-to-robot control is decoding a user's latent intent from complex and noisy brain signals. Prior approaches evaluate decoders as single-trial classifiers with accuracy-based metrics, but this neglects the inherently sequential nature of assistive control. Since a planner must integrate intermittent, noisy decoder outputs over time",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05801",
+      "url": "https://arxiv.org/abs/2611.05801",
+      "title": "WayPOP: A Panoramic Open-Set Panoptic Tracking Benchmark",
+      "summary": "arXiv:2611.05801v1 Announce Type: cross Abstract: Holistic perception for autonomous agents requires reliably segmenting and associating scene elements across time and camera views, including objects outside a fixed semantic taxonomy. Existing open-set panoptic benchmarks focus on individual images or views, while panoramic tracking benchmarks assume closed-set taxonomies. Consequently, these benchmarks do not evalua",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.05954",
+      "url": "https://arxiv.org/abs/2611.05954",
+      "title": "Robots in the City: Persona-Based Perceptions of Urban Robots",
+      "summary": "arXiv:2611.05954v1 Announce Type: cross Abstract: Pedestrians increasingly encounter robots in urban public spaces without interacting with them, but how robots change the perceived safety of a street remains unclear. We examine how robot presence and type affect perceived safety across urban contexts. We generate 18 images of Seoul streets that vary in time of day, road class, and robot condition (no robot, a delive",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06068",
+      "url": "https://arxiv.org/abs/2611.06068",
+      "title": "Fluidic Body: Swarm Robots as a Fluid Extension of the Hand",
+      "summary": "arXiv:2611.06068v1 Announce Type: cross Abstract: Swarm robots have attracted growing interest as a physical interface for human--computer interaction, since a swarm can reshape its formation to fit the objects and surroundings it works with. For a human operator, however, adapting the swarm's behavior remains difficult. Most existing methods require the user to specify where the swarm should go, and they offer no in",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06120",
+      "url": "https://arxiv.org/abs/2611.06120",
+      "title": "ReactWorld: Structuring Interaction Responses for Embodied Video Generation",
+      "summary": "arXiv:2611.06120v1 Announce Type: cross Abstract: Embodied video world models predict scene changes caused by robot actions, yet generated object responses may remain inconsistent with task intent and contact dynamics. Critical responses in embodied scenes often concentrate in local regions and specific time intervals. Inspired by chain-of-thought reasoning, we introduce ReactWorld, an embodied video generation model",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06627",
+      "url": "https://arxiv.org/abs/2611.06627",
+      "title": "Interactive World Simulation with Cosmos for Physical AI",
+      "summary": "arXiv:2611.06627v1 Announce Type: cross Abstract: We present a shared framework that adapts Cosmos world foundation models for real-time interactive world simulation in Physical AI. By streaming visual observations in response to actions and scene controls, the framework enables users and embodied agents to interact with evolving virtual environments. It supports both predicting the visual consequences of actions and",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://arxiv.org/abs/2611.06905",
+      "url": "https://arxiv.org/abs/2611.06905",
+      "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
+      "summary": "arXiv:2611.06905v1 Announce Type: cross Abstract: The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. Iterated self-improvement via reinforcement l",
+      "category": "paper",
+      "source": "arXiv cs.RO",
+      "publishedAt": "2026-11-05T00:00:00-05:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
+      "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
+      "title": "Agentic cheminformatics with Google Antigravity",
+      "summary": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-11-03T17:01:49+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "title": "Genie 4: A new generation of world simulation",
+      "summary": "Genie 4: our new world model unlocking unprecedented realism in real-time simulation.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-10-27T16:01:38+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-10-22T22:24:34+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+      "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-10-13T17:05:48+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/gemini-4-argon-for-robotics",
+      "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics",
+      "title": "Gemini 4 Argon for Robotics",
+      "summary": "",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-10-13T16:01:58+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "title": "The Agent Said It Was Done. The Database Disagreed.",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-10-03T22:56:48+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-10-02T04:01:31+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-09-29T13:07:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/Hcompany/holo4",
+      "url": "https://huggingface.co/blog/Hcompany/holo4",
+      "title": "Holo4: powering generalist computer-use agents",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-09-28T09:44:05+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+      "title": "Your Agent Aced the Task. Will It Do It Again?",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-09-15T16:00:44+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/funes",
+      "url": "https://huggingface.co/blog/funes",
+      "title": "Give Your Coding Agents a Memory You Own",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-09-03T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/introducing-agentic-video-in-gemini",
+      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini",
+      "title": "Introducing agentic video understanding with Gemini",
+      "summary": "",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-09-01T17:08:51+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+      "title": "How Much Memory Does Your Agent Actually Need?",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-08-18T18:09:38+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+      "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+      "title": "Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-08-13T17:16:04+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+      "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+      "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-08-10T16:25:36+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/muse-glimmer",
+      "url": "https://huggingface.co/blog/muse-glimmer",
+      "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-08-10T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration",
+      "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+      "summary": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-07-30T15:00:59+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots",
+      "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+      "summary": "",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-07-28T13:21:37+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+      "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-07-27T09:32:20+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-07-27T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/grabette",
+      "url": "https://huggingface.co/blog/grabette",
+      "title": "Grabette: an open system to record robot-manipulation data",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-07-21T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi",
+      "url": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi",
+      "title": "Empowering India’s next generation of innovators with ATL Saathi",
+      "summary": "Google and AIM launched ATL Saathi, a Gemini-powered AI tool empowering Indian educators in robotics labs.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-07-13T12:37:28+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ibm-research/scarfbench",
+      "url": "https://huggingface.co/blog/ibm-research/scarfbench",
+      "title": "ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-30T18:32:50+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "title": "MosaicLeaks: Can your research agent keep a secret?",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-18T18:13:13+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/is-it-agentic-enough",
+      "url": "https://huggingface.co/blog/is-it-agentic-enough",
+      "title": "Is it agentic enough? Benchmarking open models on your own tooling",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-18T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware",
+      "url": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware",
+      "title": "From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-17T10:18:05+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/agentic-resource-discovery-launch",
+      "url": "https://huggingface.co/blog/agentic-resource-discovery-launch",
+      "title": "Agentic Resource Discovery: Let agents search",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-17T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/securing-the-future-of-ai-agents",
+      "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents",
+      "title": "Securing the future of AI agents",
+      "summary": "Securing internal systems with an AI Control Roadmap, combining traditional safeguards and real-time monitoring.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-06-16T15:46:31+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-06-10T10:21:19+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/powering-the-future-of-robotics-in-europe",
+      "url": "https://deepmind.google/blog/powering-the-future-of-robotics-in-europe",
+      "title": "Powering the future of robotics in Europe",
+      "summary": "",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-06-09T14:02:33+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/mishig/spaces-agents-md",
+      "url": "https://huggingface.co/blog/mishig/spaces-agents-md",
+      "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-09T10:46:19+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/openenv-agentic-rl",
+      "url": "https://huggingface.co/blog/openenv-agentic-rl",
+      "title": "The Open Source Community is backing OpenEnv for Agentic RL",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-08T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/hf-cli-for-agents",
+      "url": "https://huggingface.co/blog/hf-cli-for-agents",
+      "title": "Designing the hf CLI as an agent-optimized way to work with the Hub",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-04T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/Hcompany/holo31",
+      "url": "https://huggingface.co/blog/Hcompany/holo31",
+      "title": "Holo3.1: Fast & Local Computer Use Agents",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-02T14:13:23+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
+      "url": "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
+      "title": "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-06-01T13:51:18+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/agent-glossary",
+      "url": "https://huggingface.co/blog/agent-glossary",
+      "title": "Harness, Scaffold, and the AI Agent Terms Worth Getting Right",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-05-25T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action",
+      "url": "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action",
+      "title": "Gemini 3.5: frontier intelligence with action",
+      "summary": "Gemini 3.5 is built to help you execute complex, agentic workflows.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-05-15T22:50:12+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-05-12T14:40:07+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/alphaevolve-impact",
+      "url": "https://deepmind.google/blog/alphaevolve-impact",
+      "title": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
+      "summary": "Explore how AlphaEvolve's Gemini-powered algorithms are driving impact across business, infrastructure, and science.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-05-06T10:43:49+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+      "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-04-28T15:58:57+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/deepseek",
+      "url": "https://huggingface.co/blog/deepseek",
+      "title": "DeepSeek-V4: a million-token context that agents can actually use",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-04-24T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ecom-rlve",
+      "url": "https://huggingface.co/blog/ecom-rlve",
+      "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-04-16T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+      "url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+      "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-04-15T12:07:25+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/gemini-robotics-er-1-6",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-1-6",
+      "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+      "summary": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-04-13T15:52:13+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models",
+      "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models",
+      "title": "Gemma 4: Byte for byte, the most capable open models",
+      "summary": "Gemma 4: Our most intelligent open models to date, purpose-built for advanced reasoning and agentic workflows.",
+      "category": "news",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-04-02T16:00:49+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ServiceNow-AI/eva",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/eva",
+      "title": "A New Framework for Evaluating Voice Agents (EVA)",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-03-24T02:01:52+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/Hcompany/holotron-12b",
+      "url": "https://huggingface.co/blog/Hcompany/holotron-12b",
+      "title": "Holotron-12B - High Throughput Computer Use Agent",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-03-17T12:33:39+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/nxp/bringing-robotics-ai-to-embedded-platforms",
+      "url": "https://huggingface.co/blog/nxp/bringing-robotics-ai-to-embedded-platforms",
+      "title": "Bringing Robotics AI to Embedded Platforms: Dataset Recording, VLA Fine‑Tuning, and On‑Device Optimizations",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-03-05T14:16:49+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/ibm-research/itbenchandmast",
+      "url": "https://huggingface.co/blog/ibm-research/itbenchandmast",
+      "title": "IBM and UC Berkeley Diagnose Why Enterprise Agents Fail Using IT-Bench and MAST",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-02-18T16:15:45+00:00",
+      "summaryType": "来源摘要节选"
+    },
+    {
+      "id": "https://huggingface.co/blog/openenv-turing",
+      "url": "https://huggingface.co/blog/openenv-turing",
+      "title": "OpenEnv in Practice: Evaluating Tool-Using Agents in Real-World Environments",
+      "summary": "",
+      "category": "news",
+      "source": "Hugging Face Blog",
+      "publishedAt": "2026-02-12T00:00:00+00:00",
+      "summaryType": "来源摘要节选"
+    }
+  ]
+}

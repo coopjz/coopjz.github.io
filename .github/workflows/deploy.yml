@@ -23,11 +23,18 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build
       - uses: actions/checkout@v4
         with:
           ref: master
           path: .pages
+      - name: Preserve last successful feed and refresh public sources
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .pages/feed.json ]; then cp .pages/feed.json public/feed.json; fi
+          python3 scripts/update_feed.py
+      - run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - run: npm run build
       - name: Publish static files to the existing Pages branch
         run: |
           git -C .pages rm -rq --ignore-unmatch .
@@ -49,3 +56,4 @@ jobs:
             --header "Authorization: Bearer ${GH_TOKEN}" \
             --header 'Accept: application/vnd.github+json' \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds"
+
