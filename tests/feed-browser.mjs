@@ -13,11 +13,11 @@ try {
  await page.locator('.feed-card').first().waitFor();
  assert.equal(await page.locator('.feed-card').count(),packageData.items.length);
  await page.screenshot({path:'test-results/feed-desktop.png'});
- for(const [label,kind,count] of [['论文','paper',count('paper')],['资讯','news',count('news')],['有趣项目','project',count('project')]]) {
+ for(const [label,kind,expectedCount] of [['论文','paper',count('paper')],['资讯','news',count('news')],['有趣项目','project',count('project')]]) {
   const button=page.getByRole('button',{name:label,exact:true});
   await button.click(); await button.click();
   assert.equal(await button.getAttribute('aria-pressed'),'true');
-  assert.equal(await page.locator('.feed-card').count(),count);
+  assert.equal(await page.locator('.feed-card').count(),expectedCount);
   assert.ok(page.url().endsWith(`type=${kind}`));
  }
  await page.goBack();

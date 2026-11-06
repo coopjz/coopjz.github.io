@@ -11,6 +11,13 @@ class PackageTests(unittest.TestCase):
     def setUp(self):
         self.data = json.loads(FIXTURE.read_text())
     def test_valid(self): validate(self.data)
+    def test_month_precision_preserved(self):
+        self.data['items'][0]['publishedAt'] = '2026-10'
+        validate(self.data)
+        self.assertEqual(self.data['items'][0]['publishedAt'], '2026-10')
+    def test_unexpected_private_metadata_refused(self):
+        self.data['items'][0]['private_notes'] = 'not for publication'
+        with self.assertRaises(ValueError): validate(self.data)
     def test_empty_refused(self):
         self.data['items'] = []
         with self.assertRaises(ValueError): validate(self.data)
