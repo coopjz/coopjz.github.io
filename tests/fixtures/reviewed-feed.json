@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "mode": "assistant-reviewed",
+  "updatedAt": "2026-11-05T10:00:00Z",
+  "review": {
+    "status": "reviewed",
+    "method": "primary-source-review",
+    "reviewedAt": "2026-11-05T09:30:00Z"
+  },
+  "items": [
+    {
+      "id": "fixture-paper",
+      "category": "paper",
+      "title": "测试论文条目",
+      "url": "https://arxiv.org/abs/2601.00001",
+      "source": "测试用公开来源",
+      "summary": "仅供自动化测试，不是可发布的研究结论。",
+      "whyRelevant": "检验分类、中文说明和来源展示。",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "verifiedAt": "2026-11-05T09:00:00Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2601.00001"
+      ]
+    },
+    {
+      "id": "fixture-news",
+      "category": "news",
+      "title": "测试资讯条目",
+      "url": "https://example.com/news",
+      "source": "测试用公开来源",
+      "summary": "仅供自动化测试，不是可发布的研究结论。",
+      "whyRelevant": "检验分类、中文说明和来源展示。",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "verifiedAt": "2026-11-05T09:00:00Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://example.com/news"
+      ]
+    },
+    {
+      "id": "fixture-project",
+      "category": "project",
+      "title": "测试项目条目",
+      "url": "https://github.com/example/research-project",
+      "source": "测试用公开来源",
+      "summary": "仅供自动化测试，不是可发布的研究结论。",
+      "whyRelevant": "检验分类、中文说明和来源展示。",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "verifiedAt": "2026-11-05T09:00:00Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://github.com/example/research-project"
+      ]
+    }
+  ]
+}

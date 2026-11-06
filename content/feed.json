@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 2,
+  "mode": "assistant-reviewed",
+  "updatedAt": "2026-11-06T03:36:10Z",
+  "review": {
+    "status": "reviewed",
+    "method": "primary-source-review",
+    "reviewedAt": "2026-11-06T03:36:10Z"
+  },
+  "items": [
+    {
+      "id": "eqa-evidence-audit-2611.01958",
+      "category": "paper",
+      "title": "Answering Without Arriving：答对问题，不等于完成取证",
+      "url": "https://arxiv.org/html/2611.01958v1",
+      "source": "arXiv",
+      "publishedAt": "2026-11-01",
+      "summary": "阅读范围：摘要及正文中的评测协议、证据条件与执行控制，未复现。作者在无图、闭环探索、参考轨迹回放等条件下比较同一组问题。在 200 个测试 episode、800 道问题中，闭环智能体没有一次到达目标，却获得 45.5% 答题准确率，几乎等于不看图；参考轨迹回放提高至 57.4%。实现边界是：连续八步没有位置进展会触发停止，原地转身观察也可能计入。因此结果反映策略与执行框架的共同表现，不能外推为所有 EQA 系统都不导航。实验数字均为作者报告。",
+      "whyRelevant": "EQA 和记忆模块评测应同时检查证据获取、答案覆盖率与语言捷径，而不只看最终答案分数。",
+      "verifiedAt": "2026-11-06T03:36:10Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.01958v1"
+      ]
+    },
+    {
+      "id": "avalon-topological-memory-2610.21586",
+      "category": "paper",
+      "title": "AVALON：先利用人已有的地图，再让机器人验证",
+      "url": "https://arxiv.org/html/2610.21586v1",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "阅读范围：摘要、系统设计、实验表 II–III，未复现。AVALON 将平面图、地点线索和任务限制组织为共享拓扑记忆，通过节点到达验证推进导航，并区分“人允许通行”和“机器人看见可通行”。作者在 12.81 米路线报告 5/5 成功，总机器人时间 46.4 秒，对照为 78.5 秒。但节省主要来自免去预先建图，纯执行更慢；计时排除人工先验准备和初始对齐。实验仅限同一办公室两条路线，强里程计扰动下成功率降至 1/5。“零样本”不等于没有地图或人工信息。",
+      "whyRelevant": "展示了人工先验、共享拓扑记忆和现场核验如何配合，适合作为空间记忆系统设计参考。",
+      "verifiedAt": "2026-11-06T03:36:10Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.21586v1"
+      ]
+    },
+    {
+      "id": "world-slam-model-2609.32626",
+      "category": "paper",
+      "title": "World SLAM Model：保持空间状态，而不只预测画面",
+      "url": "https://arxiv.org/html/2609.32626v1",
+      "source": "arXiv",
+      "publishedAt": "2026-09-26",
+      "summary": "稍早但相关的补读。阅读范围：摘要、导航与 SLAM 评测章节，未复现。WSM 将持续记忆、状态更新与误差修正融入世界建模，同时预测未来视觉、相机运动和几何。在 InternVLA-N1 的坐标目标导航评测中，作者报告 Home / Commercial 成功率 70.3% / 73.9%，高于作者重测的 LoGoPlanner 59.6% / 65.8%。结果并非全面胜出：ATE 更低，但稠密重建误差高于微调后的 SLAM-Former。这里是坐标目标导航，不能直接表述为自然语言 VLN 提升。",
+      "whyRelevant": "帮助考察几何一致性、持续空间状态与闭环控制之间的联系，以及不同指标之间的取舍。",
+      "verifiedAt": "2026-11-06T03:36:10Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2609.32626v1"
+      ]
+    },
+    {
+      "id": "smolwam-repository",
+      "category": "project",
+      "title": "SmolWAM：更便于实验的世界—动作模型",
+      "url": "https://github.com/iitimii/SmolWAM",
+      "source": "GitHub · iitimii/SmolWAM",
+      "publishedAt": "2026-10",
+      "summary": "日期精度：README 仅标注 2026 年 10 月发布，未核验具体日。阅读范围：README、评测命令、限制与许可说明，未运行代码或验证权重效果。SmolWAM 为 0.88B 参数的世界—动作模型，提供推理、LIBERO 评测、训练和未来视图预测示例。作者报告 LIBERO 成功率 95.5%，A100 上每个动作块延迟 57 ms。“面向边缘设备”不等于完成边缘部署：作者明确未测嵌入式设备，未做真实机器人实验，结果来自单训练种子。代码为 Apache-2.0；派生权重仅限非商业研究和教育用途。",
+      "whyRelevant": "适合作为世界—动作模型的实验入口，观察推理接口和运行成本；采用前需分别核对代码与权重许可。",
+      "verifiedAt": "2026-11-06T03:36:10Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://github.com/iitimii/SmolWAM"
+      ]
+    },
+    {
+      "id": "gemini-robotics-er2-preview",
+      "category": "news",
+      "title": "Gemini Robotics ER 2：高层具身推理通过工具接口连接机器人",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud/",
+      "source": "Google Cloud 官方公告",
+      "publishedAt": "2026-10-27",
+      "summary": "阅读范围：官方公告正文，未调用服务或验证产品效果。Google 宣布 Gemini Robotics Embodied Reasoning 2 在 Gemini platform 提供公共预览。公告介绍将 VLA、导航 API 和自定义低层控制接口声明为工具，由高层模型处理视频理解、任务进度与行动编排。这是厂商公告，其跨机器人泛化或安全能力并未在此独立验证；公共预览不等于生产可靠性已被证明。",
+      "whyRelevant": "关注推理、感知验证与低层控制的接口分工，为具身 Agent 的系统集成提供产品方向参考。",
+      "verifiedAt": "2026-11-06T03:36:10Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud/"
+      ]
+    }
+  ]
+}

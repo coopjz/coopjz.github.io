@@ -18,6 +18,7 @@ jobs:
       - run: npm ci
       - run: npm install --no-save --package-lock=false playwright@1.58.2
       - run: npx playwright install --with-deps chromium
+      - run: python3 scripts/prepare_feed.py content/feed.json
       - run: npm run build
       - run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Exercise desktop and mobile production UI
@@ -25,29 +26,16 @@ jobs:
           python3 -m http.server 4173 --bind 127.0.0.1 --directory dist > /tmp/feed-server.log 2>&1 &
           for i in $(seq 1 20); do curl -fsS http://127.0.0.1:4173/ >/dev/null && break; sleep 1; done
           node tests/feed-browser.mjs
-      - name: Dry-run the scheduled refresh without publishing
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - name: Verify invalid research cannot replace published data
         run: |
-          mkdir .feed-dry-run
-          git -C .feed-dry-run init -q
-          cp public/feed.json .feed-dry-run/feed.json
-          printf 'unchanged homepage' > .feed-dry-run/index.html
-          mkdir -p .feed-dry-run/.github/workflows
-          cp .github/scheduled/feed-refresh.yml .feed-dry-run/.github/workflows/feed-refresh.yml
-          git -C .feed-dry-run add .
-          git -C .feed-dry-run -c user.name=test -c user.email=test@example.invalid commit -qm baseline
-          bash scripts/refresh_pages_feed.sh .feed-dry-run
-          test "$(git -C .feed-dry-run diff --name-only)" = 'feed.json'
-          test "$(cat .feed-dry-run/index.html)" = 'unchanged homepage'
-          cmp .github/scheduled/feed-refresh.yml .feed-dry-run/.github/workflows/feed-refresh.yml
-          git -C .feed-dry-run add feed.json
-          git -C .feed-dry-run -c user.name=test -c user.email=test@example.invalid commit -qm refresh
-          git -C .feed-dry-run rm -rq --ignore-unmatch -- . ':(exclude).github/**'
-          test -f .feed-dry-run/.github/workflows/feed-refresh.yml
-          echo 'PASS: actual refresh changes only feed.json; deployment cleanup preserves scheduler.'
+          cp public/feed.json /tmp/last-published-feed.json
+          printf '{"schemaVersion":2,"mode":"assistant-reviewed","items":[]}' > /tmp/invalid-feed.json
+          if python3 scripts/prepare_feed.py /tmp/invalid-feed.json; then exit 1; fi
+          cmp public/feed.json /tmp/last-published-feed.json
+          echo 'PASS: invalid research leaves the previous content byte-for-byte unchanged.'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: feed-browser-screenshots
           path: test-results/
+

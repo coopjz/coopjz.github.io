@@ -27,12 +27,8 @@ jobs:
         with:
           ref: master
           path: .pages
-      - name: Preserve last successful feed and refresh public sources
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          if [ -f .pages/feed.json ]; then cp .pages/feed.json public/feed.json; fi
-          python3 scripts/update_feed.py
+      - name: Validate reviewed content before replacing any published files
+        run: python3 scripts/prepare_feed.py content/feed.json --previous .pages/feed.json
       - run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - run: npm run build
       - name: Publish static files to the existing Pages branch
@@ -40,6 +36,8 @@ jobs:
           git -C .pages rm -rq --ignore-unmatch -- . ':(exclude).github/**'
           cp -a dist/. .pages/
           touch .pages/.nojekyll
+          # Retire the obsolete raw-feed scheduler if it was previously installed.
+          rm -f .pages/.github/workflows/feed-refresh.yml
           git -C .pages config user.name 'github-actions[bot]'
           git -C .pages config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git -C .pages add -A
@@ -56,4 +54,3 @@ jobs:
             --header "Authorization: Bearer ${GH_TOKEN}" \
             --header 'Accept: application/vnd.github+json' \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds"
-
