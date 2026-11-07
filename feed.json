@@ -1,13 +1,62 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-06T03:36:10Z",
+  "updatedAt": "2026-11-07T03:22:08Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-06T03:36:10Z"
+    "reviewedAt": "2026-11-07T03:22:08Z"
   },
   "items": [
+    {
+      "id": "lerobot-v070",
+      "category": "project",
+      "title": "LeRobot v0.7.0：把语言交互、流式数据与远程推理接进实验流程",
+      "url": "https://huggingface.co/blog/lerobot/lerobot-release-v070",
+      "source": "Hugging Face · LeRobot",
+      "publishedAt": "2026-11-05",
+      "summary": "阅读范围：团队版本公告的交互、数据流与远程推理章节，以及仓库许可信息；未运行代码。v0.7.0 支持运行中切换子任务、按需流式读取训练数据，以及把策略放在远程 GPU 上推理，机器人端保留相机、电机与记录。视觉问答和自动选择子任务需要能生成文本的策略或外部 VLM，并非任意 VLA 接上即具备这些能力。远程推理仍需按网络与模型延迟调参，未实测成功率或实时性。仓库代码为 Apache-2.0，不能据此推定所接入的全部模型和数据集采用同一许可。",
+      "whyRelevant": "为具身 Agent 的语言规划、动作执行与实验数据管线提供现成接口，适合先在仿真中验证完整工作流。",
+      "evidenceUrls": [
+        "https://huggingface.co/blog/lerobot/lerobot-release-v070",
+        "https://github.com/huggingface/lerobot"
+      ],
+      "verifiedAt": "2026-11-07T03:22:08Z",
+      "summaryType": "研究整理"
+    },
+    {
+      "id": "flora-robotics-data-engine-2610.31779",
+      "category": "project",
+      "title": "FLORA：给机器人视频补上动作分段、描述与奖励标签",
+      "url": "https://github.com/NVlabs/Flora",
+      "source": "NVIDIA GEAR · NVlabs/Flora",
+      "publishedAt": "2026-10-22",
+      "summary": "稍早但相关的补读；日期为论文提交日，不是代码首次发布日期。阅读范围：论文摘要、仓库 README、许可和 Rewarder 模型卡，未运行或复现。TempSeg 切分动作时间段，Captioner 描述操作，Rewarder 评估任务结果与动作质量。仓库提供示例推理代码，没有训练代码，也不是厂商生产推理系统。视频超过 120 秒需分段，Rewarder 依赖目前只验证 x86_64。代码及模型使用受非商业研究和评估限制。输出是数据标注，不应直接用于控制机器人或作为唯一安全监控；奖励用于训练前需在自己的机器人留出集上核验。",
+      "whyRelevant": "把视频整理为可训练的时序语言与奖励信号，适合研究具身数据筛选、动作理解和策略后训练，但须评估标注误差与许可约束。",
+      "evidenceUrls": [
+        "https://github.com/NVlabs/Flora",
+        "https://arxiv.org/abs/2610.31779",
+        "https://huggingface.co/nvidia/Flora-Rewarder",
+        "https://github.com/NVlabs/Flora/blob/main/LICENSE"
+      ],
+      "verifiedAt": "2026-11-07T03:22:08Z",
+      "summaryType": "研究整理"
+    },
+    {
+      "id": "vidal-action-latents-2610.08150",
+      "category": "paper",
+      "title": "ViDAL：让动作潜变量同时反映未来视觉变化",
+      "url": "https://arxiv.org/html/2610.08150v1",
+      "source": "arXiv",
+      "publishedAt": "2026-10-06",
+      "summary": "稍早但相关的补读。阅读范围：摘要、方法概述、主要结果与消融表，未检查代码或复现。ViDAL 训练 Action VAE 重建动作片段，同时让潜变量对齐未来视觉动态，作为多种 VLA 可接入的动作接口。作者报告在 RoboTwin 2.0 的 50 个任务上，π₀.₅ 的 Clean / Random 平均成功率由 54.3% / 33.2% 提高至 65.5% / 43.1%；移除动态监督则降至 62.2% / 40.1%。收益并不覆盖每项任务：Pick Dual Bottles 的 Random 成功率从 49% 降至 42%。这些基准平均提升不能直接证明开放环境泛化。",
+      "whyRelevant": "提供把世界动态引入动作表示的具体途径，可用于比较动作接口设计与视觉预测监督的贡献，而非只比较模型规模。",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.08150v1"
+      ],
+      "verifiedAt": "2026-11-07T03:22:08Z",
+      "summaryType": "研究整理"
+    },
     {
       "id": "eqa-evidence-audit-2611.01958",
       "category": "paper",
