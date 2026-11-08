@@ -1,13 +1,60 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-07T03:22:08Z",
+  "updatedAt": "2026-11-08T04:14:46Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-07T03:22:08Z"
+    "reviewedAt": "2026-11-08T04:14:46Z"
   },
   "items": [
+    {
+      "id": "simplevln-2610.23203",
+      "category": "paper",
+      "title": "SimpleVLN：不改主干，用记忆采样与训练流程提升导航",
+      "url": "https://arxiv.org/html/2610.23203v1",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "稍早但相关的补读。阅读范围：方法、主要结果及消融，未复现。SimpleVLN 保留原生多模态模型主干，以固定预算的全局和局部视觉记忆组织输入，用动作分块减少调用，并依次进行模仿学习、DAgger 与强化学习。作者报告 Qwen3.5-9B 在 R2R-CE / RxR-CE 的 val-unseen 成功率为 76.7% / 80.1%。这些是仿真验证集结果，不能直接推定真实开放环境表现。文中 293 ms 对应 A100 上 4B 模型的一次动作块决策，不是 9B 模型端到端导航延迟。",
+      "whyRelevant": "提供可拆分验证的导航设计：历史帧如何取舍、动作接口如何组织，以及训练阶段各自贡献，适合与空间记忆模块对照。",
+      "verifiedAt": "2026-11-08T04:14:46Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.23203v1"
+      ]
+    },
+    {
+      "id": "skid-slam-2610.38141",
+      "category": "paper",
+      "title": "SKiD-SLAM：把通信预算纳入多机器人建图设计",
+      "url": "https://arxiv.org/html/2610.38141v1",
+      "source": "arXiv",
+      "publishedAt": "2026-10-28",
+      "summary": "稍早但相关的补读。阅读范围：系统设计、野外评测、通信实验及限制，未复现。系统按资源预算组合地点识别、点云配准与分布式位姿图优化。作者在洞穴轮式车队和模拟行星地形四足队分别验证，两次均为同构团队，并非混合机器人协作实验。在所比较的四种方法中，作者报告仅 SKiD-SLAM 在 250 kbps 限制下成功合图，机器人间关联消息平均 320 B。但带宽合规不代表网络鲁棒：模拟 200 ms 延迟或 75% 丢包时合图失败；地面类比场地也不等于真实行星部署。",
+      "whyRelevant": "适合研究多机器人空间记忆与SLAM时联合考虑精度、带宽、延迟和丢包，避免只用理想网络下的地图指标判断可部署性。",
+      "verifiedAt": "2026-11-08T04:14:46Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.38141v1"
+      ]
+    },
+    {
+      "id": "maestro-robotics-tools-2511.00917",
+      "category": "project",
+      "title": "MAESTRO：让编程智能体编排机器人感知与控制工具",
+      "url": "https://github.com/penn-pal-lab/maestro",
+      "source": "Penn PAL Lab · MAESTRO",
+      "publishedAt": "2026-11-01",
+      "summary": "日期为论文 v3 更新日，不是项目首次发布；论文首版发表于 2025 年。阅读范围：v3 方法、实验与限制，以及仓库 README 和 NOTICE，未运行代码或复现。VLM 通过写代码组合感知、几何、抓取和运动规划工具，并依据执行反馈重规划。作者在八项桌面任务、每项五个不同设置的比较中，报告六项平均任务进度最高，不是全面胜过 VLA；移动操作没有对照基线，执行速度和感知、控制、完成判断仍有局限。当前代码面向 Franka/DROID 桌面系统，尚不含论文的 VLA 工具，需相机、GPU 服务及外部模型 API。自身代码为 MIT，部分依赖代码和权重仅限非商业使用。",
+      "whyRelevant": "展示工具编排式具身 Agent 的可检查实现路径，可对照端到端 VLA 研究反馈、重规划与模块失败；采用时须分别核对硬件和依赖许可。",
+      "verifiedAt": "2026-11-08T04:14:46Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://github.com/penn-pal-lab/maestro",
+        "https://arxiv.org/html/2511.00917v3",
+        "https://github.com/penn-pal-lab/maestro/blob/main/NOTICE"
+      ]
+    },
     {
       "id": "lerobot-v070",
       "category": "project",
