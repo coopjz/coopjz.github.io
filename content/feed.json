@@ -1,13 +1,60 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-08T04:14:46Z",
+  "updatedAt": "2026-11-09T03:53:09Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-08T04:14:46Z"
+    "reviewedAt": "2026-11-09T03:53:09Z"
   },
   "items": [
+    {
+      "id": "neo-vla-2611.06918",
+      "category": "paper",
+      "title": "NEO-VLA：让动作专家读取不同深度的视觉信息",
+      "url": "https://arxiv.org/html/2611.06918v2",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "阅读范围：v2 方法、主要结果与实机评测，未复现。NEO-VLA 用轻量卷积分块将图像直接接入视觉语言骨干，让动作专家读取多个层级的视觉表示。作者报告 RoboTwin 2.0 Clean2Rand 得分 69.40；三项实机任务各测试 20 次，成功次数为 12、17、13，对照 π₀.₅ 为 10、14、13。实机样本很小，且骨干预训练和容量不完全一致，提升不能全部归因于移除独立视觉编码器。首版为 11 月 4 日，所读 v2 于 11 月 6 日更新。",
+      "whyRelevant": "把动作模块能读取哪些视觉层级变成可检验变量，适合研究 VLA 的几何信息保留和分布外泛化。",
+      "verifiedAt": "2026-11-09T03:53:09Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.06918v2"
+      ]
+    },
+    {
+      "id": "text-action-divergence-2611.04166",
+      "category": "paper",
+      "title": "Say the Same, Act Differently：解释没变，动作仍可能偏离",
+      "url": "https://arxiv.org/html/2611.04166v1",
+      "source": "arXiv",
+      "publishedAt": "2026-11-03",
+      "summary": "阅读范围：方法、主结果及开环评测和统计检验附录，未复现。研究在驾驶与操作模型中发现，视觉扰动可改变动作而保留原有文字解释。作者在 154 条带障碍标注的驾驶记录上报告：全图扰动下 52.6% 出现解释逐字不变、预测轨迹新增碰撞，局部扰动为 35.1%。这是 6.4 秒开环几何评估，不是现实事故率；相对保留文本的基线，48.7% 到 52.6% 的差异不显著（p=0.451）。结果支持直接核验动作，不能仅凭解释文本判断安全。",
+      "whyRelevant": "提醒具身 Agent 评测区分语言解释与动作证据，安全监控应覆盖轨迹和环境约束。",
+      "verifiedAt": "2026-11-09T03:53:09Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.04166v1"
+      ]
+    },
+    {
+      "id": "roboharness-v2-astra",
+      "category": "project",
+      "title": "RoboHarness V2：把机器人接口整理为编码智能体工作区",
+      "url": "https://github.com/BinceQu/RoboHarness",
+      "source": "GitHub · RoboHarness",
+      "publishedAt": "2026-11-05",
+      "summary": "日期为新评测公告日；V2 于 10 月 25 日开源。阅读范围：README、许可及 Astra 评测页，未运行或复现。V2 将机器人模型、关节说明和可读 Python 工具组织为工作区，结合视觉关键点、几何约束与闭环核验完成操作。新页面展示 100 项 BEHAVIOR 仿真任务，但总均值混合 99 项官方评分与一项未完成轨迹的视频估分，不能视作全部正式评分。运行需要 Linux x86-64、NVIDIA RTX、场景数据和独立模型服务；每 GPU 48GB 是验证配置，不是最低要求。代码 MIT，数据、Isaac Sim 和模型权重有独立条款。",
+      "whyRelevant": "提供工具型具身 Agent 的工作区组织方式，可与端到端 VLA 对照；复用前需核对评测口径、运行资源和组件许可。",
+      "evidenceUrls": [
+        "https://github.com/BinceQu/RoboHarness",
+        "https://roboharness-lab.github.io/astra/",
+        "https://github.com/BinceQu/RoboHarness/blob/main/LICENSE"
+      ],
+      "verifiedAt": "2026-11-09T03:53:09Z",
+      "summaryType": "研究整理"
+    },
     {
       "id": "simplevln-2610.23203",
       "category": "paper",
