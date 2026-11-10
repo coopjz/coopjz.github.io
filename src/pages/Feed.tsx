@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 type Category = 'all' | 'paper' | 'news' | 'project';
@@ -7,6 +7,10 @@ type FeedData = { schemaVersion: number; mode: string; updatedAt: string | null;
 const categories: [Category, string][] = [['all', '全部'], ['paper', '论文'], ['news', '资讯'], ['project', '有趣项目']];
 const date = (value: string) => /^\d{4}-\d{2}$/.test(value) ? `${value.replace('-', '年')}月（具体日未核验）` : /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : new Date(value).toLocaleDateString('zh-CN');
 const safe = (url: string) => { try { return new URL(url).protocol === 'https:'; } catch { return false; } };
+const reviewDay = (value: string) => {
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10);
+};
 
 export default function Feed() {
   const [params, setParams] = useSearchParams();
@@ -35,7 +39,10 @@ export default function Feed() {
       <p className="feed-meta">{data.updatedAt ? `内容更新：${new Date(data.updatedAt).toLocaleString('zh-CN')} · ` : ''}{items.length} 条内容 · 助手研究整理</p>
 
       {!items.length && <p className="feed-empty">{data.items.length ? '没有匹配内容，试试其他分类或关键词。' : '暂无已审阅内容。研究完成并核验后将在这里发布。'}</p>}
-      <div className="feed-items">{items.map(item => <article key={item.id} className="feed-card"><div className="feed-meta">{categories.find(([key]) => key === item.category)?.[1]} · {item.source} · <time dateTime={item.publishedAt}>{date(item.publishedAt)}</time> 发布</div><h2><a href={item.url} target="_blank" rel="noreferrer">{item.title} ↗</a></h2><p>{item.summary}</p><p><strong>为什么关注：</strong>{item.whyRelevant}</p><div className="feed-meta">{item.summaryType} · 核验 {date(item.verifiedAt)}{item.updatedAt ? ` · 仓库更新 ${date(item.updatedAt)}` : ''}</div><div className="feed-meta">依据：{item.evidenceUrls?.filter(safe).map((url, index) => <a key={url} href={url} target="_blank" rel="noreferrer">{index > 0 ? " · " : ""}原始来源 {index + 1} ↗</a>)}</div></article>)}</div>
+      <div className="feed-items">{items.map((item, index) => <Fragment key={item.id}>
+        {(index === 0 || reviewDay(item.verifiedAt) !== reviewDay(items[index - 1].verifiedAt)) && <p className="feed-date-label" aria-label="研究整理日期（UTC）">{reviewDay(item.verifiedAt) ? <time dateTime={reviewDay(item.verifiedAt)!}>{reviewDay(item.verifiedAt)}</time> : '日期未标注'}<span>研究整理 · UTC</span></p>}
+        <article className="feed-card"><div className="feed-meta">{categories.find(([key]) => key === item.category)?.[1]} · {item.source} · <time dateTime={item.publishedAt}>{date(item.publishedAt)}</time> 发布</div><h2><a href={item.url} target="_blank" rel="noreferrer">{item.title} ↗</a></h2><p>{item.summary}</p><p><strong>为什么关注：</strong>{item.whyRelevant}</p><div className="feed-meta">{item.summaryType} · 核验 {date(item.verifiedAt)}{item.updatedAt ? ` · 仓库更新 ${date(item.updatedAt)}` : ''}</div><div className="feed-meta">依据：{item.evidenceUrls?.filter(safe).map((url, index) => <a key={url} href={url} target="_blank" rel="noreferrer">{index > 0 ? " · " : ""}原始来源 {index + 1} ↗</a>)}</div></article>
+      </Fragment>)}</div>
     </>}
     <p className="feed-meta">内容依据公开原始来源，经助手筛选、阅读与整理。作者或厂商报告的结果不等于独立复现；每条注明核验范围。</p>
   </section>;
