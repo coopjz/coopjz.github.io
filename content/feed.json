@@ -1,13 +1,61 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-09T03:53:09Z",
+  "updatedAt": "2026-11-10T04:12:02Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-09T03:53:09Z"
+    "reviewedAt": "2026-11-10T04:12:02Z"
   },
   "items": [
+    {
+      "id": "messynav-2611.07417",
+      "category": "paper",
+      "title": "MessyNav：先判断障碍物该不该动，再规划如何清路",
+      "url": "https://arxiv.org/html/2611.07417v1",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "阅读范围：方法、实机与离线实验、限制及相关附录，未复现。MessyNav 先用 VLM 判断物体是否适合移动，再调用抓取、侧推和导航技能清路。作者在两个环境的 15 个实机场景中报告成功 10/15，对照直接 VLM 规划为 6/15，每场景仅试一次。55 场景的重复离线评估为 62.4% 对 55.4%，但假定底层执行完美；夜间反而落后，为 29.2% 对 44.2%。当前操作技能开环，且没有持久记忆，尚不能据此推定长期、安全的自主导航。",
+      "whyRelevant": "将物体语义与情境纳入可通行性判断，为导航与操作结合提供案例，也指出交互更新的空间记忆仍是缺口。",
+      "verifiedAt": "2026-11-10T04:10:25Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.07417v1",
+        "https://arxiv.org/abs/2611.07417"
+      ]
+    },
+    {
+      "id": "hitch-humanoid-harness-2611.08039",
+      "category": "paper",
+      "title": "HITCH：让 VLM 通过三维测量与全身接口控制人形机器人",
+      "url": "https://arxiv.org/html/2611.08039v1",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "阅读范围：方法、实验与训练附录，未运行代码或复现。HITCH 让 VLM 选择图像点并读取深度对应的三维位置，再由规划器和学习型跟踪器执行身体指令。作者用五类基础任务的 2,500 条仿真轨迹微调模型，在调整后的 SIMPLE 六任务上报告成功率 51.1%；每任务再加五条轨迹后为 95.0%。相机、指令及时间预算有调整，不能直接当作原榜单成绩。真实 G1 搬箱和导航分别成功 13/20、6/10，仅覆盖两类任务；高层 VLM 要等执行指令完成后才获得新观察，无法在执行途中重新决策。",
+      "whyRelevant": "把具身泛化拆为场景测量、身体接口和跨任务训练，可用于研究高层推理与低层控制之间如何传递可核验反馈。",
+      "verifiedAt": "2026-11-10T04:10:25Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.08039v1",
+        "https://arxiv.org/abs/2611.08039"
+      ]
+    },
+    {
+      "id": "jam-just-action-models-2610.37219",
+      "category": "paper",
+      "title": "JAM：用未来表征监督动作，不必生成未来画面",
+      "url": "https://arxiv.org/html/2610.37219v1",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "稍早但相关的补读。阅读范围：方法、主实验与相关消融附录，未复现。JAM 让当前视觉特征预测冻结编码器提供的未来表征，训练后移除预测分支。作者在固定 Ovis-U1 策略架构下报告 LIBERO-Plus 成功率由 65.27% 提升至 79.95%。Wan 配置仅替换监督时从 55.31% 到 55.58%，改用 VAE 未来目标后才到 64.54%，说明收益依赖目标设计。实验仅在仿真中进行，LIBERO-Plus 使用固定 15% 子集；匹配基线推理时原本也不生成未来，不能将这些结果理解为推理加速。",
+      "whyRelevant": "为 VLA 与世界—动作模型的比较提供可拆分变量：骨干初始化、未来监督目标和推理路径，帮助避免把多个设计变化混为同一贡献。",
+      "verifiedAt": "2026-11-10T04:10:25Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2610.37219v1",
+        "https://arxiv.org/abs/2610.37219"
+      ]
+    },
     {
       "id": "neo-vla-2611.06918",
       "category": "paper",
