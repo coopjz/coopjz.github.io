@@ -1,13 +1,80 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-10T04:12:02Z",
+  "updatedAt": "2026-11-11T03:29:12Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-10T04:12:02Z"
+    "reviewedAt": "2026-11-11T03:29:12Z"
   },
   "items": [
+    {
+      "id": "cpnav-calibrated-navigation-2611.10366",
+      "category": "paper",
+      "title": "CPNav：先校准动作分数，再用探索记忆回溯",
+      "url": "https://arxiv.org/html/2611.10366v1",
+      "source": "arXiv",
+      "publishedAt": "2026-11-07",
+      "summary": "阅读范围：方法、仿真与实机结果、限制及保证证明，未复现。CPNav 用 RGB-D 生成可行动作，以成功路径的最低动作分数做共形校准，再结合探索树剪枝和回溯，任务是对象目标搜索。作者在 HM3D 的 200 个 episode 中报告成功率由未校准基线的 81.0% 提至 86.0%；两套公寓共 24 个实机 episode 中由 66.7% 提至 83.3%。理论保证依赖校准与部署数据可交换、存在可达路径、完整回溯、可靠执行和足够步数；实机仍使用仿真校准，不能视为无条件安全保证。系统会维护可通行地图，“map-free”并非完全不用地图。",
+      "whyRelevant": "为语义导航提供可检查的不确定性处理方式，适合对照动作评分、探索记忆和回溯机制，而不是只比较最终成功率。",
+      "verifiedAt": "2026-11-11T03:29:12Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.10366v1",
+        "https://arxiv.org/abs/2611.10366"
+      ]
+    },
+    {
+      "id": "mosu2-semantic-map-navigation-2611.11148",
+      "category": "paper",
+      "title": "MOSU2：让导航推理按需查询地图中的位置与速度",
+      "url": "https://arxiv.org/html/2611.11148v1",
+      "source": "arXiv",
+      "publishedAt": "2026-11-08",
+      "summary": "阅读范围：系统方法、MOSU2 评测口径、结果与限制，未复现。系统以 GPS 路由和可通行轨迹为基础，先由 VLM 判断是否需要补充证据，再查询局部地图中的语义对象、位置与速度，并结合连续图像选择动作。作者报告五类真实场景的非加权平均导航成功率从 MOSU 的 61.8% 升至 94.2%，但平均决策延迟也从 1.72 秒升至 3.83 秒，包含云端网络往返。每组试验有限，作者明确将差异视作趋势而非统计确证；停车手势场景成功率仍仅 71%。地图误匹配、遮挡和首阶段漏判仍可能导致错误，不能据此认定道路部署安全。",
+      "whyRelevant": "展示语义地图如何成为按需获取的行动证据，也提醒评估补充信息的收益、查询延迟与动态信息过时风险。",
+      "verifiedAt": "2026-11-11T03:29:12Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.11148v1",
+        "https://arxiv.org/abs/2611.11148"
+      ]
+    },
+    {
+      "id": "sigma-lewm-2611.12732",
+      "category": "paper",
+      "title": "Σ-LeWM：用反向与逆动力学监督改善世界模型规划",
+      "url": "https://arxiv.org/html/2611.12732v1",
+      "source": "arXiv",
+      "publishedAt": "2026-11-09",
+      "summary": "阅读范围：方法、主实验、消融和延迟附录，未运行代码或复现。Σ-LeWM 在多步正向预测之外，加入反向状态预测和逆动力学的对比目标；辅助模块仅用于训练，测试仍采用 CEM 潜空间规划。作者报告 OGBench-Scene 成功率从 LeWM 的 57.7% 升至 80.7%，仿真 Gear-Assembly 严格成功率从 10.9% 升至 74.9%。收益不覆盖所有任务：Reacher 与 LeWM 同为 86.0%。机器人操作实验使用 IsaacSim 和测试集成功画面作为目标，尚无真机验证，也不是语言指令操作。“7.5 倍”指 CEM 搜索预算缩减，不等于实测端到端加速。",
+      "whyRelevant": "提供通过训练目标改善可规划表征的具体路线，便于拆分研究状态表示、辅助动力学和规划预算各自的作用。",
+      "verifiedAt": "2026-11-11T03:29:12Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.12732v1",
+        "https://arxiv.org/abs/2611.12732"
+      ]
+    },
+    {
+      "id": "lingbot-touch-tactile-representations",
+      "category": "project",
+      "title": "LingBot-Touch：把不同触觉传感器接入统一表征接口",
+      "url": "https://github.com/Robbyant/lingbot-touch",
+      "source": "Robbyant · LingBot-Touch",
+      "publishedAt": "2026-11-09",
+      "summary": "日期为论文提交日，不是代码首次发布日期。阅读范围：论文摘要、仓库 README、接口指南与许可，未核验全文实验或运行代码。LingBot-Touch 用模态专属编码与共享 Transformer 表达磁性、压阻及视触觉信号。当前发布的是冻结编码器与输入适配工具，输出带时间、手指和空间地址的触觉特征，不包含下游任务头或动作策略。视触觉输入是已解码测量而非原始 RGB；新传感器仍需核验几何标定、信号轴与量程，仅张量形状一致不代表可直接迁移。代码为 Apache-2.0，派生第三方部分保留 MIT 通知；权重另行托管，其访问和许可未在此核验。",
+      "whyRelevant": "为 VLA 和灵巧操作补充触觉输入提供实现入口，也清楚暴露了硬件标定、特征读取与策略集成之间的边界。",
+      "verifiedAt": "2026-11-11T03:29:12Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://github.com/Robbyant/lingbot-touch",
+        "https://arxiv.org/abs/2611.12806",
+        "https://github.com/Robbyant/lingbot-touch/blob/main/DATA_INTERFACE_GUIDE.md",
+        "https://github.com/Robbyant/lingbot-touch/blob/main/LICENSE",
+        "https://github.com/Robbyant/lingbot-touch/blob/main/THIRD_PARTY_NOTICES.md"
+      ]
+    },
     {
       "id": "messynav-2611.07417",
       "category": "paper",
