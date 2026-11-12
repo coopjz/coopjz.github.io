@@ -1,13 +1,48 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-11T03:29:12Z",
+  "updatedAt": "2026-11-12T03:29:27Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-11T03:29:12Z"
+    "reviewedAt": "2026-11-12T03:29:27Z"
   },
   "items": [
+    {
+      "id": "memory-clock-temporal-shortcuts-2611.14488",
+      "category": "paper",
+      "title": "memory-clock：暂停也被算成进度，记忆 VLA 的时间捷径",
+      "url": "https://arxiv.org/html/2611.14488v1",
+      "source": "arXiv · memory-clock",
+      "publishedAt": "2026-11-10",
+      "summary": "阅读范围：方法、机制诊断、修复实验及相关限制附录，并核验仓库许可，未运行或复现。作者在 RoboMME 的计数任务中加入两次 5 秒暂停，已发布 FrameSamp-Modul 的 PickXtimes 成功数从 47/50 降至 16/50；同样暂停不写入记忆则恢复到 45/50。单独缩放时间戳也改变停止行为，移除时间编码仍未消除问题。按事件压缩记忆可恢复部分损失，但可能误删真实重复动作，对随机短暂停顿的改善不显著。所有执行实验均在仿真中，检测器依赖仿真信号，尚无真机验证。代码仓库为 MIT，依赖模型和数据的许可需另查。",
+      "whyRelevant": "为长程具身记忆提供具体诊断：让时间流逝但任务不推进，比较记忆可见与隐藏条件，检查策略记住的是事件还是执行节奏。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.14488v1",
+        "https://arxiv.org/abs/2611.14488",
+        "https://github.com/bennidict23/memory-clock",
+        "https://github.com/bennidict23/memory-clock/blob/main/LICENSE"
+      ],
+      "verifiedAt": "2026-11-12T03:29:27Z"
+    },
+    {
+      "id": "compass1-history-navigation-2611.12087",
+      "category": "paper",
+      "title": "Compass 1：用历史地图与稀疏关键帧支持导航回溯",
+      "url": "https://arxiv.org/abs/2611.12087",
+      "source": "arXiv · Archon Robotics",
+      "publishedAt": "2026-11-09",
+      "summary": "阅读范围：论文方法、实机评测、消融与失败分析，以及官方项目页，未运行或复现。Compass 1 将历史关键帧的位置、索引和朝向绘成二维地图，与视觉关键帧共同输入模型，再用阶段判断、探索一致性和目标检索问答训练。作者在 Go2 的四类场景、八项任务共 320 次试验中报告成功率 79.4%，对照最高为 17.8%；持续回溯任务为 58%，多阶段导航为 50%。其他三类机器人各仅测试 10 次，不能把总分视作跨平台充分验证。系统仍依赖里程计执行闭环控制与远程 GPU 推理，探索中仍有碰撞，单目输入不等于无需定位或具备安全保证。",
+      "whyRelevant": "将历史视觉、显式空间关系与记忆使用监督分开设计，为拓扑导航和具身空间记忆提供可拆分的研究变量。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.12087",
+        "https://arxiv.org/pdf/2611.12087v1",
+        "https://www.archon.tech/research/compass1"
+      ],
+      "verifiedAt": "2026-11-12T03:29:27Z"
+    },
     {
       "id": "cpnav-calibrated-navigation-2611.10366",
       "category": "paper",
