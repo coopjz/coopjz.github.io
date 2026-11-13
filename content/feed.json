@@ -1,13 +1,61 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-12T03:29:27Z",
+  "updatedAt": "2026-11-13T03:31:00Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-12T03:29:27Z"
+    "reviewedAt": "2026-11-13T03:31:00Z"
   },
   "items": [
+    {
+      "id": "v3dsam-semantic-loop-instance-map-2611.12452",
+      "category": "paper",
+      "title": "V3DSAM：分开核验回环与地图中的物体身份",
+      "url": "https://arxiv.org/html/2611.12452v1",
+      "source": "arXiv · V3DSAM",
+      "publishedAt": "2026-11-09",
+      "summary": "阅读范围：方法、全部实验表与指标定义，未运行或复现。V3DSAM 联合像素重投影与三维物体对应核验回环，再用类别约束的三维连通性维护全局实例。作者在 TUM 的 15 个候选中剔除 4 个假回环、保留 11 个真回环，但原生 VGGT 验证同样满分，且阈值在 TUM 调优。ScanNet 预测几何设置下，相比使用同类几何输入的 OVO，身份一致性 IDC 从 0.439 升至 0.565，长期重识别率仅从 0.183 升至 0.192，实例覆盖率反而下降。结果限于室内数据集，不能视为已解决长期实例记忆。",
+      "whyRelevant": "把回环可靠性与对象身份维护分开评测，为语义地图提供可检查的关联依据，也提醒同时看身份一致性、重识别与覆盖率。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.12452v1",
+        "https://arxiv.org/abs/2611.12452"
+      ],
+      "verifiedAt": "2026-11-13T03:31:00Z"
+    },
+    {
+      "id": "leash-agentic-robotics-safety-2611.14115",
+      "category": "paper",
+      "title": "LEASH：把视觉安全审查放到机器人执行关口",
+      "url": "https://arxiv.org/html/2611.14115v1",
+      "source": "arXiv · LEASH / RoboRisk",
+      "publishedAt": "2026-11-10",
+      "summary": "阅读范围：方法、评测协议、主结果与限制，未运行或复现。LEASH 在任务开始、动作执行及放手或倾倒前设置视觉审查关卡。作者在 92 项仿真和 13 项实机任务中评测；实机四种规划器各报告零次判定伤害、11/13 安全成功，另一规划器仍有 5/13 伤害。每项实机任务每配置仅运行一次，“伤害”包含潜在危险，“安全成功”包含正确拒绝或终止，不能等同于完成全部操作。技能执行中的检查目前只覆盖夹爪打开与倾倒，并非完整安全保证。",
+      "whyRelevant": "将安全审查落实到执行接口，并同时考察安全结果与任务表现，适合研究具身代理在长技能执行中如何重新获取行动许可。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.14115v1",
+        "https://arxiv.org/abs/2611.14115"
+      ],
+      "verifiedAt": "2026-11-13T03:31:00Z"
+    },
+    {
+      "id": "onlyact-action-representations-world-models-2611.14420",
+      "category": "paper",
+      "title": "OnlyAct：从视频基础模型中分离动作与场景",
+      "url": "https://arxiv.org/html/2611.14420v1",
+      "source": "arXiv · OnlyAct",
+      "publishedAt": "2026-11-10",
+      "summary": "阅读范围：方法、主实验、实现细节与限制附录，未运行或复现。OnlyAct 对 V-JEPA 2 的帧对表示做无动作标签的对比适配，让相同运动跨场景靠近，再用于条件视频生成。作者报告 12 个连续动作数据集的平均线性探测 R² 为 0.490，冻结 V-JEPA 2 为 0.347，同数据重训的 DreamDojo 为 0.211。这衡量动作信息的可读出程度，不是机器人成功率；实验仍是离线评测，直接动作控制需少量动作标签。场景替换仅适用于静态相机，且不保证完全消除未来状态泄漏。",
+      "whyRelevant": "把动作表达、场景泄漏与生成控制分开评测，为视频世界模型提供更可诊断的动作接口，避免把画面逼真当成控制有效。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.14420v1",
+        "https://arxiv.org/abs/2611.14420"
+      ],
+      "verifiedAt": "2026-11-13T03:31:00Z"
+    },
     {
       "id": "memory-clock-temporal-shortcuts-2611.14488",
       "category": "paper",
