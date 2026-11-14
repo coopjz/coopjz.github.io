@@ -1,13 +1,61 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-13T03:31:00Z",
+  "updatedAt": "2026-11-14T03:51:04Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-13T03:31:00Z"
+    "reviewedAt": "2026-11-14T03:51:04Z"
   },
   "items": [
+    {
+      "id": "h2e-navigation-experience-distillation-2611.16246",
+      "category": "paper",
+      "title": "H2E：把导航代理的成功经历教给独立运行的 VLA",
+      "url": "https://arxiv.org/html/2611.16246v1",
+      "source": "arXiv · H2E",
+      "publishedAt": "2026-11-12",
+      "summary": "阅读范围：方法、主实验、消融与评测附录，未运行或复现。H2E 将规划器工具与子指令产生的运动统一重标为原任务动作，按目标测地距离变化筛选动作监督，并给目标附近状态补停止标签，训练后不再调用外部 LLM。作者在 REVERIE-CE 的 3,189 个未见场景 episode 中报告成功率从 35.0% 升至 44.9%；但曾进入目标区的比例从 52.0% 降至 50.1%，成功率提升不能等同于更高探索覆盖。标签构造使用目标测地距离，测试不提供；成功标准是停在 3 米目标区内。结果限于单一仿真基准、VLA 和规划器，尚未学会可靠的偏航恢复。",
+      "whyRelevant": "把高层代理经验转成低层导航监督，并区分到达、停下与偏航恢复，适合检验外部地图和记忆中的哪些能力真正被策略吸收。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.16246v1",
+        "https://arxiv.org/abs/2611.16246"
+      ],
+      "verifiedAt": "2026-11-14T03:51:04Z"
+    },
+    {
+      "id": "rgbd-slam-edge-raspberry-pi5-2611.16472",
+      "category": "paper",
+      "title": "树莓派 5 上的 RGB-D SLAM：低误差也可能来自丢失轨迹",
+      "url": "https://arxiv.org/html/2611.16472v1",
+      "source": "arXiv · RGB-D SLAM on the Edge",
+      "publishedAt": "2026-11-12",
+      "summary": "阅读范围：平台配置、评测协议、逐项结果、性能剖析与局限，未运行或复现。作者在树莓派 5 上对六段 TUM 序列、三种分辨率比较 RTAB-Map 与 ORB-SLAM3，并同时报告覆盖率、误差和耗时。例如 fr3_stx 原始分辨率下，ORB-SLAM3 的轨迹误差为 0.017 米却仅覆盖 51%，RTAB-Map 为 0.068 米、覆盖 100%，不能直接据此排精度。RTAB-Map 被设为逐帧建节点、内存不设上限且串行运行，并非默认部署；大多数配置只测一次，少量复测中轨迹误差的变异系数（标准差/均值）最高为 27%。这些结果更适合诊断配置与计时口径，而非宣布某系统全面胜出。",
+      "whyRelevant": "为低功耗建图提供实测参照，强调先检查跟踪完整性，再比较误差、前后端耗时与资源占用，避免把失败造成的低成本误判为优化收益。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.16472v1",
+        "https://arxiv.org/abs/2611.16472"
+      ],
+      "verifiedAt": "2026-11-14T03:51:04Z"
+    },
+    {
+      "id": "actioncodec2-streaming-action-tokenizer-2611.15490",
+      "category": "paper",
+      "title": "ActionCodec2：逐步释放动作，而非等待整块解码",
+      "url": "https://arxiv.org/html/2611.15490v1",
+      "source": "arXiv · ActionCodec2",
+      "publishedAt": "2026-11-11",
+      "summary": "阅读范围：方法、主要实验、执行协议与限制，未运行或复现。ActionCodec2 以解码器重建状态为参照量化动作，逐步修正残差，再用 Set-BPE 压缩，支持动作块内部接收反馈。作者在连续 20 Hz 的 LIBERO 执行中，同一 ACodec2+ 检查点流式释放达 91.0% 成功率，整块释放为 73.1%；等待期间环境仍推进，动作队列为空时输出零运动。四组真实 Franka 任务每策略共 50 次试验，73.9% 衡量的是里程碑进度，并非完整任务成功率。误差界针对轨迹编解码，不保证策略正确或硬件安全；高速动态动作的压缩优势可能下降。",
+      "whyRelevant": "动作表示同时影响反馈频率和执行等待，评测应把离线重建、真实时间下的闭环控制与任务完成情况分开。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.15490v1",
+        "https://arxiv.org/abs/2611.15490"
+      ],
+      "verifiedAt": "2026-11-14T03:51:04Z"
+    },
     {
       "id": "v3dsam-semantic-loop-instance-map-2611.12452",
       "category": "paper",
