@@ -1,13 +1,49 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-14T03:51:04Z",
+  "updatedAt": "2026-11-15T04:07:02Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-14T03:51:04Z"
+    "reviewedAt": "2026-11-15T04:07:02Z"
   },
   "items": [
+    {
+      "id": "protovis-nav-local-visual-supervision-2611.17330",
+      "category": "paper",
+      "title": "ProtoVis-Nav：以局部视觉监督对齐无人机航点",
+      "url": "https://arxiv.org/html/2611.17330v1",
+      "source": "arXiv · ProtoVis-Nav",
+      "publishedAt": "2026-11-12",
+      "summary": "阅读范围：方法、实验、限制及官方评测实现，未运行或复现。ProtoVis-Nav 在训练时将下一专家轨迹位置投影到当前图像，用局部裁剪特征监督视觉原型，再辅助预测航点，并不生成未来画面。作者在 OpenUAV 的 1,587 条 Test Unseen 轨迹上报告成功率由同骨干基线的 27.91% 升至 30.12%。成功定义为停在目标 20 米内，采用 L1 辅助设置；公开默认实现会以参考轨迹生成阶段与转向提示，不能当作完全自主的精准飞行。闭环结果均来自仿真，细障碍碰撞仍突出。仓库代码为 MIT 许可，外部模型与仿真资产许可需另查。",
+      "whyRelevant": "用局部视觉监督替代整帧预测，为视觉与航点对齐提供一种轻量思路；比较收益时需要同时检查辅助输入、到达阈值与真实飞行验证，不能把视觉特征预测直接等同于世界模型。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.17330v1",
+        "https://arxiv.org/abs/2611.17330",
+        "https://github.com/ygs0002/protovis-nav",
+        "https://github.com/ygs0002/protovis-nav/blob/main/src/vlnce_src/assist.py",
+        "https://github.com/ygs0002/protovis-nav/blob/main/src/traveluav_qwen/model_wrapper/utils/travel_qwen_util.py",
+        "https://github.com/ygs0002/protovis-nav/blob/main/LICENSE"
+      ],
+      "verifiedAt": "2026-11-15T04:07:02Z"
+    },
+    {
+      "id": "eviseek-evidence-centric-active-eqa-2611.06434",
+      "category": "paper",
+      "title": "EviSeek：围绕证据需求组织行动，而非只累积观察",
+      "url": "https://arxiv.org/html/2611.06434v1",
+      "source": "arXiv · EviSeek",
+      "publishedAt": "2026-11-04",
+      "summary": "阅读范围：方法、主实验、证据评分协议与限制，未运行或复现。EviSeek 先把问题转成证据需求，再组织观察与交互，并选择保留相关视图。作者在 3,436 个 ESI-Bench 问题上，使用 Qwen3-VL-32B 将 Single-model 基线的准确率从 45.6% 提高到 52.7%，但度量比较类（尺寸与距离合计）由 42.0% 降至 33.5%。视觉支持分数由看到参考答案的模型裁判评定，且不计动作结果文字，并非人工独立核验。ESI 主配置允许子任务在证据未齐时结束；结果限于仿真，证据板也不等于可靠空间模型。",
+      "whyRelevant": "把行动目的、观察获取与记忆保留联系起来，为 EQA 提供比只看答对率更细的诊断。值得关注的是如何真正取得并保留证据，同时区分视觉支持评分与完整的物理取证。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.06434v1",
+        "https://arxiv.org/abs/2611.06434"
+      ],
+      "verifiedAt": "2026-11-15T04:07:02Z"
+    },
     {
       "id": "h2e-navigation-experience-distillation-2611.16246",
       "category": "paper",
