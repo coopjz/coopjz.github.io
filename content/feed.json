@@ -1,13 +1,63 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-15T04:07:02Z",
+  "updatedAt": "2026-11-16T03:38:07Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-15T04:07:02Z"
+    "reviewedAt": "2026-11-16T03:38:07Z"
   },
   "items": [
+    {
+      "id": "vine-exocentric-obstacle-map-navigation-2611.16282",
+      "category": "paper",
+      "title": "VINE：外部相机先建障碍地图，再交给导航控制器",
+      "url": "https://arxiv.org/html/2611.16282v1",
+      "source": "arXiv · VINE",
+      "publishedAt": "2026-11-12",
+      "summary": "阅读范围：方法、主实验、消融、写实仿真与局限，以及官方仓库说明，未运行或复现。VINE 将固定外部相机图像转成障碍地图，再接 PPO 或 A*，把视角转换与控制分开。作者在抽象仿真中报告单相机 VINE+PPO 成功率 92.3%，机载相机 PPO 为 83.9%；但前者还使用机器人位姿、近似相机位姿和房间尺寸，不是等信息输入的比较。换到写实仿真需适配地图网络，控制策略不重训；双相机在四个未见家具环境中成功率为 77.2%。系统假设矩形房间，未验证真机，不能理解为任意监控相机即插即用。代码公开，但仓库未见明确许可证。",
+      "whyRelevant": "显式地图把视觉域适配与控制学习解耦，为环境侧感知和可替换导航模块提供参照；需要把地图泛化、已知位姿假设和控制器迁移分别检验。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.16282v1",
+        "https://arxiv.org/abs/2611.16282",
+        "https://github.com/raulsteinmetz/vine"
+      ],
+      "verifiedAt": "2026-11-16T03:38:07Z"
+    },
+    {
+      "id": "reactive-vla-execution-strategies-2611.15491",
+      "category": "paper",
+      "title": "动态 VLA：更快重规划未必更灵敏，执行方式同样关键",
+      "url": "https://arxiv.org/html/2611.15491v1",
+      "source": "arXiv · What Makes a VLA Reactive?",
+      "publishedAt": "2026-11-11",
+      "summary": "阅读范围：研究设计、主结果、方法适配与评测附录，未运行或复现。作者把预测长度、实际执行步数、推理调度和动作段衔接分开，基于 π0.5 测试两套仿真和三个真实动态任务。在 5 厘米/秒传送带上，ABPolicy 适配版将动作执行频率从 20 调至 30 Hz，每组 15 次测试的成功率由 13% 升至 93%；该对比改变的是执行频率，并同时缩短动作段时长。更频繁重规划也可能反复触发策略的缓慢起步。方法是统一框架中的改写，非原系统完整复现；主要实机方法比较每设置 15–20 次，杯与罐由人工移动，不宜把小差距外推为方法排名。",
+      "whyRelevant": "比较 VLA 时，除了成功率和推理速度，还应报告观察延迟、动作段连续性及实际执行频率。先调执行策略可能获得与额外训练相当的收益，但不能假定越短的动作段越好。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.15491v1",
+        "https://arxiv.org/abs/2611.15491"
+      ],
+      "verifiedAt": "2026-11-16T03:38:07Z"
+    },
+    {
+      "id": "nvidia-groot2-announcement-20261109",
+      "category": "news",
+      "title": "GR00T 2：联合预测视频与动作，少样本成绩需看任务筛选",
+      "url": "https://research.nvidia.com/labs/gear/gr00t-2/",
+      "source": "NVIDIA · 官方公告与技术白皮书",
+      "publishedAt": "2026-11-09",
+      "summary": "阅读范围：官方公告、项目页及白皮书架构、Dexter-50 协议和局限，未运行或复现。GR00T 2 用同一扩散 Transformer 联合预测未来视频与机器人动作，以机器人专用接口适配不同形体。作者报告 Dexter-50 平均成功率从零样本的 40% 升至每任务五段示范适配后的 95%；但这 50 项任务已筛选为五段示范后至少达到 80% 成功率的任务，且此前已出现在人类或其他机器人数据中，不能视为任意新任务的泛化率。截至核验日，项目页注明代码预计 12 月提供；尚未核验到 GR00T 2 权重、代码及其许可证的完整公开发布。",
+      "whyRelevant": "把视频预测与动作学习放入同一模型，为跨形体迁移提供了具体方案。其少样本结果值得跟进，但需要同时看任务筛选、目标机器人数据边界及实际资源开放状态。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://research.nvidia.com/labs/gear/gr00t-2/",
+        "https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf",
+        "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+      ],
+      "verifiedAt": "2026-11-16T03:38:07Z"
+    },
     {
       "id": "protovis-nav-local-visual-supervision-2611.17330",
       "category": "paper",
