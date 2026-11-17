@@ -1,13 +1,47 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-16T03:38:07Z",
+  "updatedAt": "2026-11-17T03:54:00Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-16T03:38:07Z"
+    "reviewedAt": "2026-11-17T03:54:00Z"
   },
   "items": [
+    {
+      "id": "xnav-humanoid-mission-2611.17598",
+      "category": "paper",
+      "title": "X-Nav：把百米导航拆成路线跟随、目标接近与低层避障",
+      "url": "https://arxiv.org/html/2611.17598v1",
+      "source": "arXiv · AgiBot X-Lab",
+      "publishedAt": "2026-11-12",
+      "summary": "阅读范围：系统、部署、主实验与评测说明，未运行或复现。X-Nav 用 MELIOR 跟随语言路线，再由 X-Navarch 分解任务、复核停止，并调用显式目标接近技能。作者展示灵犀 X2 从室内走到邻楼商店的两次长程运行，其中一次为 96.6 米；这不是大规模真机成功率。仅导航模型输入为 RGB，完整系统仍用 LiDAR、深度和里程计，推理在机外 GPU。数字孪生中加入纠错窗口后，100 个验证与测试回合的三米内到达率从 40% 升至 80%，但一米内到达率从 28% 降至 20%；训练与评测共享场地和目标，不能视作未见场景泛化。",
+      "whyRelevant": "值得借鉴的是技能交接时的任务复核，以及用里程计补偿感知、推理和网络延迟后的目标位置。评测应分开路线完成、精确停靠与现场适配，而不只报告一个导航成功率。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.17598v1",
+        "https://arxiv.org/abs/2611.17598"
+      ],
+      "verifiedAt": "2026-11-17T03:54:00Z"
+    },
+    {
+      "id": "hflex-eqa-floorplan-hierarchy-2609.26360",
+      "category": "paper",
+      "title": "HFLEX-EQA：先决定缺什么证据，再选择找房间、探房间或看物体",
+      "url": "https://arxiv.org/html/2609.26360v1",
+      "source": "arXiv · NTNU Autonomous Robots Lab",
+      "publishedAt": "2026-09-22",
+      "summary": "旧作补充。阅读范围：方法、实验与官方仓库，未运行或复现。HFLEX-EQA 让 VLM 根据场景图、视觉记忆和房间连通先验，在探索房间、观察物体、寻找未见房间三种模式间选择。它并非纯拓扑系统，仍使用 Hydra 稠密网格、TSDF 与语义占据图。仿真先验来自 HM3D 语义标注，实机先验由已知布局人工生成，不是在线自行发现。作者在筛选后的 108 个 OpenEQA、114 个 ExploreEQA 单层样本上，用 Gemini-3.5 多选设置报告 75.0%/63.2%；去除平面图先验降至 64.8%/53.5%。实机无选项结果来自回放，不是独立闭环实验。",
+      "whyRelevant": "把缺哪类证据转成不同探索行为，比统一给 frontier 打分更有结构；比较时须控制额外布局先验与地图预算。代码采用 BSD-3-Clause，依赖与模型仍需分别核对许可。",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2609.26360v1",
+        "https://arxiv.org/abs/2609.26360",
+        "https://github.com/ntnu-arl/hflex_eqa",
+        "https://raw.githubusercontent.com/ntnu-arl/hflex_eqa/main/LICENSE"
+      ],
+      "verifiedAt": "2026-11-17T03:54:00Z"
+    },
     {
       "id": "vine-exocentric-obstacle-map-navigation-2611.16282",
       "category": "paper",
