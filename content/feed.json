@@ -1,13 +1,61 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-17T03:54:00Z",
+  "updatedAt": "2026-11-18T03:47:31Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-17T03:54:00Z"
+    "reviewedAt": "2026-11-18T03:47:31Z"
   },
   "items": [
+    {
+      "id": "agenticjevnav-2611.19912",
+      "category": "paper",
+      "title": "AgenticJevNav：异常才复核，过期决策不能继续执行",
+      "url": "https://arxiv.org/html/2611.19912v1",
+      "source": "arXiv",
+      "summary": "已阅读方法、实验和局限章节。系统把目标维护、事件触发复核与有界执行分开：受阻、失败或连续低进展时才调用 Jev；版本、时效和一次性消费检查阻止旧决定继续驱动机器人。作者报告仿真 44/60 成功、单一实机场景 21/30 成功；串行等待仍占主要开销，且实机存在碰撞和错误到达。对比包含经过适配的方法和不同历史协议，不宜当作标准导航榜单排名；未独立复现。",
+      "whyRelevant": "值得关注的不只是规划模型，而是目标变更、证据记忆和动作撤销如何形成可审计的运行时接口。",
+      "publishedAt": "2026-11-15",
+      "verifiedAt": "2026-11-18T03:47:31Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.19912v1",
+        "https://arxiv.org/abs/2611.19912"
+      ]
+    },
+    {
+      "id": "easynav-2611.19894",
+      "category": "paper",
+      "title": "EasyNav：用共享导航状态和显式调度缩短反应链",
+      "url": "https://arxiv.org/html/2611.19894v1",
+      "source": "arXiv",
+      "summary": "已阅读架构、实现及实验章节。EasyNav 是 ROS 2 导航框架，用共享 NavState、时间与坐标一致性约束连接可替换模块，并区分实时与非实时循环。作者报告受控激光阻塞触发到停止命令的平均延迟，室内约 33 ms 对比 Nav2 的 377 ms，室外约 8 ms 对比 71 ms。这不是物理制动距离或通用安全保证；室外资源统计来自每框架一次连续运行，不能视作多次独立重复。未运行代码或复现实验。",
+      "whyRelevant": "将地图表示与模块调度解耦的设计可供导航系统工程参考；具体收益仍依赖插件、调度和硬件配置。",
+      "publishedAt": "2026-11-15",
+      "verifiedAt": "2026-11-18T03:47:31Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.19894v1",
+        "https://arxiv.org/abs/2611.19894"
+      ]
+    },
+    {
+      "id": "scalevla-2611.21607",
+      "category": "paper",
+      "title": "ScaleVLA：大模型只做特征读取，动作头负责连续控制",
+      "url": "https://arxiv.org/html/2611.21607v1",
+      "source": "arXiv",
+      "summary": "已阅读方法与主要实验表。ScaleVLA 冻结 552B VLM 主干，只读取因果编码器特征，将其交给从头训练的 flow-matching 动作头，不逐步生成文字推理。作者报告 LIBERO-PRO 平均成功率 45.1%，但扰动下仍明显下降。约 216 ms 是四张 H200 上的 RoboCasa 动作块延迟中位数，实机插充电器任务约 384 ms，不能解释为单卡性能或控制周期。实机参考布局每策略仅 10 次试验；未独立复现。",
+      "whyRelevant": "把预训练表征能力和动作生成分开，提供了另一种 VLA 扩展路线；比较时应同时看演示数量、泛化、硬件成本和动作块延迟。",
+      "publishedAt": "2026-11-16",
+      "verifiedAt": "2026-11-18T03:47:31Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/html/2611.21607v1",
+        "https://arxiv.org/abs/2611.21607"
+      ]
+    },
     {
       "id": "xnav-humanoid-mission-2611.17598",
       "category": "paper",
