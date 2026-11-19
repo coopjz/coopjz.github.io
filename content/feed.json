@@ -1,13 +1,45 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-18T03:47:31Z",
+  "updatedAt": "2026-11-19T04:04:01Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-18T03:47:31Z"
+    "reviewedAt": "2026-11-19T04:04:01Z"
   },
   "items": [
+    {
+      "id": "evonav-2611.22321",
+      "category": "paper",
+      "title": "EvoNav：从稀疏经验图中积累场景知识，而不只检索旧观察",
+      "url": "https://arxiv.org/abs/2611.22321",
+      "source": "arXiv · Weitao An 等",
+      "summary": "已阅读摘要及正文方法、主要实验部分，未复现。EvoNav 在线合并语义、空间和任务反馈为经验原子，在子任务边界提炼类别共现知识；新目标通过图传播检索候选，再绑定当前物体实例并检查可达性。作者在 927 个 HM3D-MFMON 序列上报告 SeqSR 30.31%、SeqSPL 15.54%，对应比较方法为 29.13%、9.64%。它仍依赖 ObjectMap、三维可通行地图和 3D A*，不是纯稀疏拓扑规划；记忆跨子任务保留，但每个新 episode 重置，不能据此宣称已解决跨会话终身记忆。",
+      "whyRelevant": "值得借鉴的是将直接目标证据、环境共现先验与失败反馈分开建模，再由几何可执行性约束检索结果。适合研究目标条件探索和语义记忆，但记忆图不能替代底层导航地图。",
+      "publishedAt": "2026-11-17",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.22321",
+        "https://arxiv.org/html/2611.22321v1"
+      ],
+      "verifiedAt": "2026-11-19T04:04:01Z",
+      "summaryType": "研究整理"
+    },
+    {
+      "id": "rwm-audit-2611.23118",
+      "category": "paper",
+      "title": "RWM 审计：预测更准，不等于在世界模型中学出的策略更可靠",
+      "url": "https://arxiv.org/abs/2611.23118",
+      "source": "arXiv · Joyjeet Singh",
+      "summary": "已阅读摘要及正文讨论、局限部分，未复现审计代码。作者研究 ANYmal D 的 RWM/RWM-U，报告 18 个微调模型都降低了单步和八步预测误差，却有 13 个产出失败策略；因此开环误差不能单独替代闭环策略评估。这是审计作者的实验结果，不是本站独立验证。范围仅为单一机器人、平地步态和模拟数据，没有真机；策略在作者自建 MuJoCo 模型中测试，样本较少，原始 checkpoint 的训练数据归属不清，不能直接外推至原系统全规模性能。",
+      "whyRelevant": "为机器人世界模型评测提供重要反例：应分别检查预测误差、长时滚动稳定性、不确定性校准与策略执行结果，避免只凭一步预测指标选择或压缩动力学模型。",
+      "publishedAt": "2026-11-17",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.23118",
+        "https://arxiv.org/html/2611.23118v1"
+      ],
+      "verifiedAt": "2026-11-19T04:04:01Z",
+      "summaryType": "研究整理"
+    },
     {
       "id": "agenticjevnav-2611.19912",
       "category": "paper",
