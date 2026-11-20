@@ -1,13 +1,45 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-19T04:04:01Z",
+  "updatedAt": "2026-11-20T03:18:35Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-19T04:04:01Z"
+    "reviewedAt": "2026-11-20T03:18:35Z"
   },
   "items": [
+    {
+      "id": "embodied-graph-2611.24115",
+      "title": "Embodied Graph：在任务相关实体图上预测动作后果",
+      "source": "arXiv · Zongyuan Wu 等",
+      "summary": "已阅读摘要、正文方法、实验设置和局限，未复现。方法按任务相关性、新颖性与覆盖度筛选实体，维护有容量上限的图记忆，并用节点级循环状态空间模型沿关系边传播动作影响，在图状态中进行想象。作者在 Minecraft、Crafter 和网页任务中报告收益。需注意：关系边仍由预定义规则构造，感知前端依赖对象标签或 DOM；Minecraft 设置预先提供工具并加快挖掘，且使用 200M 参数 DreamerV3 执行器，不能把 4M 图模型视作完整系统成本或宣称已验证真机泛化。",
+      "whyRelevant": "适合思考稀疏语义图如何从检索记忆走向可预测的任务状态模型；这里的图关系与交互状态不同于导航可通行拓扑，不能直接等同于拓扑探索方案。",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.24115",
+      "publishedAt": "2026-11-18",
+      "verifiedAt": "2026-11-20T03:18:35Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.24115",
+        "https://arxiv.org/html/2611.24115v1"
+      ]
+    },
+    {
+      "id": "citynav-vla-2611.24247",
+      "title": "CityNav-VLA：将固定地图记忆与机体坐标执行显式分离",
+      "source": "arXiv · Haotian Xu 等",
+      "summary": "已阅读摘要、正文方法、消融与局限，未复现。模型在固定朝北地图中保留观察和轨迹，以指令及当前状态查询空间记忆，预测地图坐标中的目的地，再由确定性控制器转换为机体动作；早期目标承诺用前 K 次预测的逐坐标中位数稳定执行。作者报告 A100 上模型前向与目标头平均 679.7 ms，并非机载端到端延迟。地图依赖地理、地标先验及模拟器已配准俯视 RGB 的已探索区域，不是从原始相机完成在线 SLAM；固定目标也限制后续纠错和停止决策。",
+      "whyRelevant": "值得借鉴的是明确区分长期空间证据、动态查询和控制坐标系；评估此类记忆收益时，应同时审查地图先验、定位输入及执行策略，而不只比较成功率。",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.24247",
+      "publishedAt": "2026-11-18",
+      "verifiedAt": "2026-11-20T03:18:35Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.24247",
+        "https://arxiv.org/html/2611.24247v1"
+      ]
+    },
     {
       "id": "evonav-2611.22321",
       "category": "paper",
