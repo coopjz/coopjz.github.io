@@ -1,13 +1,45 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-20T03:18:35Z",
+  "updatedAt": "2026-11-21T03:44:31Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-20T03:18:35Z"
+    "reviewedAt": "2026-11-21T03:44:31Z"
   },
   "items": [
+    {
+      "id": "roam-legged-navigation-2611.25215",
+      "title": "ROAM：用语义风险地图连接 VLM 与野外足式控制",
+      "source": "arXiv · Takahiro Miki 等",
+      "summary": "已阅读公开论文摘要、系统方法及野外实验部分，未复现。ROAM 让 VLM 输出语义类别及风险、偏好和可落脚值，由开放词汇分割投影到高程地图，再交给仿真训练的局部导航与运动控制策略，而非直接让 VLM 生成关节动作。作者报告 10.1 km 山地路线按时间计算的自主率为 96.7%，但施工区域仍需两次主要人工干预，涉及围栏漏分割和路径偏离。结果不是全程无人干预，也不能把语义风险分数当作经校准的安全概率。",
+      "whyRelevant": "展示了低频语义推理与高频几何控制之间可落地的接口，适合研究语义可通行性和分层导航；系统依赖稠密语义及高程地图，不是纯拓扑、无地图方案。",
+      "publishedAt": "2026-11-18",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.25215",
+      "verifiedAt": "2026-11-21T03:44:31Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.25215",
+        "https://arxiv.org/html/2611.25215v1"
+      ]
+    },
+    {
+      "id": "embodyagent-posttraining-2611.26196",
+      "title": "EmbodyAgent：在统一代码控制接口上串联蒸馏、SFT 与在线 RL",
+      "source": "arXiv · Wei Dai 等",
+      "summary": "已阅读摘要、正文接口设计、结果与局限，未复现。框架从黑盒教师收集成功轨迹，经多模态 SFT 初始化 9B 学生，再对学生自身交互进行结果奖励 RL；三个阶段均使用视觉观测和七维末端控制接口，没有预设操作技能库。作者在十个 LIBERO Spatial 任务的 100 个留出初始状态上报告成功数从 SFT 的 14 提升至 RL 的 84，并发现运行时错误会通过反馈历史自我强化。实验仅覆盖单一仿真套件、单次训练，无多随机种子或真机验证；这是同任务的新初始状态评测，不等于未见任务泛化。",
+      "whyRelevant": "为 robot-use agent 提供了接口保持一致的后训练路径，也提醒评估不能只看成功率，还应记录格式错误、运行时错误和观察调用频次。",
+      "publishedAt": "2026-11-19",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.26196",
+      "verifiedAt": "2026-11-21T03:44:31Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.26196",
+        "https://arxiv.org/html/2611.26196v1"
+      ]
+    },
     {
       "id": "embodied-graph-2611.24115",
       "title": "Embodied Graph：在任务相关实体图上预测动作后果",
