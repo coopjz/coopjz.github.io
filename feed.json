@@ -1,13 +1,61 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-21T03:44:31Z",
+  "updatedAt": "2026-11-22T03:37:00Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-21T03:44:31Z"
+    "reviewedAt": "2026-11-22T03:37:00Z"
   },
   "items": [
+    {
+      "id": "spatialscout-v2-2611.26177",
+      "category": "paper",
+      "title": "SpatialScout-V2：用主动选视角评测真实室内的物体中心定位",
+      "url": "https://arxiv.org/abs/2611.26177",
+      "source": "arXiv · Zhaoxi Zhang 等",
+      "summary": "已阅读摘要、正文目标定义、观测协议和结果表，未复现。基准取自 100 户真实住宅，覆盖 29 类共 3,171 个目标。模型在固定目标清单下主动选择已录制视点和朝向，可查询相机位姿及内参，提交物体三维中心。作者报告所测模型最高的全目标平均 IoU 为 22.52%，超过 0.5 的目标占 18.36%。评分使用真实框尺寸衡量中心偏移，并不评估预测框的大小或朝向；能跳转到任一录制视点，也不等同于机器人自由移动或自主建图。",
+      "whyRelevant": "把选择下一条观测与几何定位准确度放到同一闭环中，可用于分析语义地图中的证据覆盖与精度。不过，它不检验避障、路径成本或位姿估计。",
+      "publishedAt": "2026-11-19",
+      "verifiedAt": "2026-11-22T03:37:00Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.26177",
+        "https://arxiv.org/html/2611.26177v1"
+      ]
+    },
+    {
+      "id": "passage-conditioned-navigation-2611.25788",
+      "title": "通行事件导航：避开障碍还不够，越障前也要对准入口",
+      "source": "arXiv · Wai Ka Sun 等",
+      "summary": "已阅读摘要、正文方法要点、对照实验和讨论，未复现。系统在示教路线中记录台阶等地形转换的进入位置、朝向和步态区间；局部重规划后仍检查越障入口，未达到姿态要求就重新对齐。作者报告，在含定位噪声的受控测试中，进入位置与朝向同时满足阈值的比例从 24.1% 升至 88.6%；这不是越障成功率。真机在比赛中完成六次路线，但依赖预先示教、既有步态和手设规则，不能推论为未知地形的自主技能发现。",
+      "whyRelevant": "可把楼梯、门槛等拓扑边写成有方向和进入条件的通行事件，而非仅标记为连通。这样可针对局部重规划后仍然无法执行的路径设计评测。",
+      "publishedAt": "2026-11-19",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.25788",
+      "verifiedAt": "2026-11-22T03:36:23Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.25788",
+        "https://arxiv.org/html/2611.25788v1"
+      ]
+    },
+    {
+      "id": "bev-diffusion-2611.24155",
+      "title": "BEV-Diffusion：给单目局部规划保留离开视野的障碍",
+      "source": "arXiv · Iana Zhura 等",
+      "summary": "已阅读摘要、正文 BEV 构建与记忆、评测设置及消融，未复现。模型联合学习俯视可通行性、不确定性和扩散轨迹。部署时，小型四足用图像估计平面自运动，更新机体坐标系中的短程网格，保留先前见过的障碍，并用上一条路径初始化采样。作者报告，室内试验中记忆保留了 62% 至 66% 的邻近视野外障碍，所测基线至多 3%。这是特定场景的局部记忆结果；几何投影依赖近似平地和相机高度，训练标签仍用到 LiDAR 与里程信息。",
+      "whyRelevant": "提供了纯视觉短程避障的可比较设计：将已见障碍的暂存与全局地图、全局定位分开，也可单独量化视野外障碍记忆是否改善闭环行为。",
+      "publishedAt": "2026-11-18",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.24155",
+      "verifiedAt": "2026-11-22T03:36:23Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.24155",
+        "https://arxiv.org/html/2611.24155v1"
+      ]
+    },
     {
       "id": "roam-legged-navigation-2611.25215",
       "title": "ROAM：用语义风险地图连接 VLM 与野外足式控制",
