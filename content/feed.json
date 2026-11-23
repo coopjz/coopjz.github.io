@@ -1,13 +1,46 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-22T03:37:00Z",
+  "updatedAt": "2026-11-23T03:23:44Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-22T03:37:00Z"
+    "reviewedAt": "2026-11-23T03:23:44Z"
   },
   "items": [
+    {
+      "id": "chac-adaptive-nav-2611.25587",
+      "title": "CHAC：按场景变化和执行反馈决定何时重新调用导航模型",
+      "source": "arXiv · Weile Gong 等",
+      "summary": "已阅读摘要、正文方法和真机结果，未运行代码。CHAC 冻结 OmniNav-Fast，根据缓存视觉、到达提示和控制反馈决定继续执行已有航点还是重新推理；收到停止请求时，可用局部访问历史做一次有限修正。作者报告 HM3D-OVON 与 R2R-CE 的模型调用分别减少 33.4% 与 64.7%，成功率分别下降 0.63 与 10.82 个百分点；四项真机任务各方法共 40 次试验，GPU 推理耗时降低 49.7%，并非端到端延迟。结果只验证了所用策略与控制器，不代表可无损省算力。",
+      "whyRelevant": "给视觉语言导航提供一个不改模型权重的调用调度基线。比较时应同时报告调用量、任务成功率和端到端耗时，尤其不要用目标导航的小幅损失掩盖指令跟随的较大退化。",
+      "publishedAt": "2026-11-19",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.25587",
+      "verifiedAt": "2026-11-23T03:23:44Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.25587",
+        "https://arxiv.org/html/2611.25587v1",
+        "https://github.com/phare111/chac"
+      ]
+    },
+    {
+      "id": "accord-metric-mapping-2611.25279",
+      "title": "Accord：用 VIO 度量锚点校正单目深度，再拼接稠密子图",
+      "source": "arXiv · Jaafar Mahmoud 等",
+      "summary": "已阅读摘要、正文系统与消融、附录局限，未复现。VIO 提供带度量尺度的位姿，从短关键帧窗口三角化锚点；系统用锚点和共视图像间的双向深度一致性校正单帧尺度，再在因子图中合并稠密子图。作者报告同一建图配置在六种相机与 IMU 设置上取得 5 cm 阈值 F-score 的第一或第二名。地图仍继承 VIO 的尺度与轨迹误差；部分手机记录跟踪失败、某序列回环反而变差，且丢弃 20 m 以外的深度。",
+      "whyRelevant": "把度量尺度来源与神经深度图的局部一致性分开，便于诊断建图误差来自位姿还是深度；这不是无尺度漂移保证，也不是稀疏语义地图。",
+      "publishedAt": "2026-11-18",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.25279",
+      "verifiedAt": "2026-11-23T03:23:44Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.25279",
+        "https://arxiv.org/html/2611.25279v1"
+      ]
+    },
     {
       "id": "spatialscout-v2-2611.26177",
       "category": "paper",
