@@ -1,13 +1,46 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-23T03:23:44Z",
+  "updatedAt": "2026-11-24T03:45:26Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-23T03:23:44Z"
+    "reviewedAt": "2026-11-24T03:45:26Z"
   },
   "items": [
+    {
+      "id": "mem-x-cross-episode-vln-2611.27166",
+      "title": "Mem-X：让导航指令必须用到前几回合的记忆",
+      "source": "arXiv · Zhikang Shi 等",
+      "summary": "已查阅摘要及正文任务设置、结果表，未运行基准。Mem-X 在 Habitat 的 34 个 HM3DSem 场景组织 710 个会话、2,071 个回合，其中 1,204 个依赖记忆；后续指令引用过去见过的物体或走过的路线。较难两级只给回合内位姿，不给回合间变换。作者在四种导航策略上报告，加入语义记忆、跨回合定位与粗到细检索后，记忆任务表现改善。实验仍是仿真，且给定回合内位姿，不等于验证了真机长期运行中的漂移和场景变化。",
+      "whyRelevant": "提供一种检验记忆是否真正影响决策的协议：让历史目标和路线无法仅凭当前指令确定，并分别量化重定位、检索和路线复现。",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.27166",
+      "publishedAt": "2026-11-20",
+      "verifiedAt": "2026-11-24T03:45:26Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.27166",
+        "https://arxiv.org/html/2611.27166v1",
+        "https://github.com/NJU-R-L-Group-Embodied-Lab/Mem-X"
+      ]
+    },
+    {
+      "id": "fs-nav-waypoint-corridor-2611.27418",
+      "title": "FS-Nav：不生成未来视频，直接预测下一航点和候选通行带",
+      "source": "arXiv · Kangyi Wu 等",
+      "summary": "已查阅摘要及正文方法、消融，未复现。FS-Nav 用空间记忆和语言预测短程航点与中程路径带，经俯视图和第一视角叠加交给导航模型。作者在 R2R-CE 未见场景验证集上报告，相对只提供历史空间图的对照，未来状态引导再提高 3.0 个百分点的成功率；若训练时给真值而测试时改用预测，表现反而大幅下降。66.7 ms 是单张 RTX 4090 的未来状态预测时延，不是完整导航循环延迟。预测路径带也不是经过验证的无碰撞走廊。",
+      "whyRelevant": "如果下游只需知道下一步往哪走，可以把预测目标压缩到空间结构，不必合成未来画面；训练时仍要让决策模型见到预测误差。",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.27418",
+      "publishedAt": "2026-11-20",
+      "verifiedAt": "2026-11-24T03:45:26Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.27418",
+        "https://arxiv.org/html/2611.27418v1"
+      ]
+    },
     {
       "id": "chac-adaptive-nav-2611.25587",
       "title": "CHAC：按场景变化和执行反馈决定何时重新调用导航模型",
