@@ -1,13 +1,47 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-24T03:45:26Z",
+  "updatedAt": "2026-11-25T03:21:49Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-24T03:45:26Z"
+    "reviewedAt": "2026-11-25T03:21:49Z"
   },
   "items": [
+    {
+      "id": "embo-harness-robot-policy-2611.31201",
+      "title": "Embo-Harness：用消融拆解通用大模型的机器人闭环",
+      "source": "arXiv · Xiao-Ming Wu 等",
+      "summary": "已查阅摘要及正文的设计消融与评测，未复现。Embo-Harness 从同一套闭环出发，逐项测试动作表示、执行步长、视觉输入、提示和工具。在其配置中，末端执行器动作和短的固定长度动作块优于所测的关节动作和自适应分块。作者在 RoboLab-120 桌面操作仿真上报告成功率 83.3%，表中最强对照为 57.1%；真机四项任务共成功 15/20 次。消融主要围绕特定模型与桌面操作，不能据此判定所有机器人任务都适合相同动作接口。",
+      "whyRelevant": "把目标定位误差与低层执行误差分开测，比只对比整套系统的成功率更容易找出瓶颈。",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.31201",
+      "publishedAt": "2026-11-23",
+      "verifiedAt": "2026-11-25T03:21:49Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.31201",
+        "https://arxiv.org/html/2611.31201v1",
+        "https://dravenalg.github.io/projects/Embo-Harness/"
+      ]
+    },
+    {
+      "id": "weavevla-sparse-relational-graph-2611.31126",
+      "title": "WeaveVLA：用任务相关的稀疏 3D 关系图引导机械臂",
+      "source": "arXiv · Zien Wang、Yuhao Pan 等",
+      "summary": "已查阅摘要、正文结果、消融和附录感知设置，未复现。WeaveVLA 把目标物、夹爪和参照物连成稀疏图，让每条边跨帧更新相对几何，再把图压缩为输入动作模型的 token。在 LIBERO-Plus 上，作者报告 StarVLA-GR00T 从 74.9% 升至 82.0%，π₀.₅ 从 85.7% 升至 87.8%；把稀疏图换成全连接图后的 StarVLA 变体为 79.8%。仿真实验使用按基准微调的检测器，真机只测试了三种桌面任务，结果不等同于开放场景泛化。",
+      "whyRelevant": "提供了比较任务相关边、全连接图和边记忆的实验范式，也提示应单独量化上游检测覆盖率，避免把感知收益全部归给图结构。",
+      "category": "paper",
+      "url": "https://arxiv.org/abs/2611.31126",
+      "publishedAt": "2026-11-23",
+      "verifiedAt": "2026-11-25T03:21:49Z",
+      "summaryType": "研究整理",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.31126",
+        "https://arxiv.org/html/2611.31126v2",
+        "https://kingzein.github.io/weave-vla/"
+      ]
+    },
     {
       "id": "mem-x-cross-episode-vln-2611.27166",
       "title": "Mem-X：让导航指令必须用到前几回合的记忆",
