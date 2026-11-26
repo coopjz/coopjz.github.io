@@ -1,13 +1,45 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-25T03:21:49Z",
+  "updatedAt": "2026-11-26T03:43:48Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-25T03:21:49Z"
+    "reviewedAt": "2026-11-26T03:43:48Z"
   },
   "items": [
+    {
+      "id": "roam-bench-evidence-verification-2611.33143",
+      "title": "ROAM-Bench：答对了，也要验证探索证据是否齐全",
+      "source": "arXiv · Xingjian Ran 等",
+      "summary": "已查阅正文的任务规则、主表与失败分析，未复现。ROAM-Bench 用仿真状态和行动记录分别核验答案或任务结果、必需的观察与交互，以及更强的几何或覆盖证据。严格成功只要求结果正确且必需证据达标；更强证据单独用于诊断。作者在 27 个室内环境、250 项任务上报告，表现最好的受测模型结果正确率为 73.2%，严格成功率为 69.2%；人类在分层抽样的 100 项任务上严格成功率为 84.0%。核验依赖 Isaac Sim 真值及预先定义的任务条件，不能直接外推到真实机器人。",
+      "whyRelevant": "能把具身问答中的漏看、跨视角实例判断错误和正确但证据不足分开统计，适合验证探索器到底因何停下，而不是只看答对率。",
+      "category": "paper",
+      "publishedAt": "2026-11-24",
+      "verifiedAt": "2026-11-26T03:43:48Z",
+      "summaryType": "研究整理",
+      "url": "https://arxiv.org/abs/2611.33143",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.33143",
+        "https://arxiv.org/html/2611.33143v1"
+      ]
+    },
+    {
+      "id": "iwam-implicit-world-action-model-2611.33141",
+      "title": "iWAM：不生成未来视频，也能用世界模型预测动作",
+      "source": "arXiv · Vansh Kapoor 等",
+      "summary": "已查阅正文的双向 flow map、训练／推理算法及 DROID 评测，未复现。训练时先把示范的未来视频潜变量反推到对应噪声，再提取一次由噪声朝未来预测的中间特征，让这些特征与示范动作对齐。部署时从先验采样，只运行一次视频主干，不显式生成未来视频。作者报告 iWAM（MIP）和显式预测基线 IDM 在 DROID 仿真中分别为 91.7% 和 96.7%，三项真机任务各 20 次的平均成功率为 85.0% 和 80.0%。A100 单卡、batch=1 时，iWAM 的模型推理耗时约为 IDM 的六分之一；两者计时均用两步动作去噪，但 IDM 的成功率来自八步设置，不是同一工作点，也不是完整机器人闭环延迟。",
+      "whyRelevant": "将训练期的未来对齐与推理期的视频生成拆开，可用于检验动作策略到底需要哪些未来信息，以及为此付出的延迟。",
+      "category": "paper",
+      "publishedAt": "2026-11-24",
+      "verifiedAt": "2026-11-26T03:43:48Z",
+      "summaryType": "研究整理",
+      "url": "https://arxiv.org/abs/2611.33141",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.33141",
+        "https://arxiv.org/html/2611.33141v1"
+      ]
+    },
     {
       "id": "embo-harness-robot-policy-2611.31201",
       "title": "Embo-Harness：用消融拆解通用大模型的机器人闭环",
