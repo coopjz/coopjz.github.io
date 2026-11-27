@@ -1,13 +1,46 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-26T03:43:48Z",
+  "updatedAt": "2026-11-27T03:39:26Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-26T03:43:48Z"
+    "reviewedAt": "2026-11-27T03:39:26Z"
   },
   "items": [
+    {
+      "id": "merloc-pose-retrieval-2611.34932",
+      "title": "MERLoc：用位姿先验检索渲染视图，减少动态场景重定位误差",
+      "source": "arXiv · Michael Baumgartner 等",
+      "summary": "已查阅正文的主表、真机实验和消融，未复现。MERLoc 从有尺度的 3D Gaussian Splatting 地图离线渲染符合机器人相机安装条件的参考视图；运行时结合里程计传播的位姿先验，按位置和朝向选取候选视图，再做几何匹配。作者报告，在动态动捕数据上，同一参考库与经典定位后端使用外观检索、先验筛选加外观检索、位姿检索时，位置 RMSE 分别为 17.9、9.7、8.2 cm；位姿检索并未提升所有后端。该方法依赖稠密的预建参考库及可用的先验，动态走廊导航仅是定性展示。",
+      "whyRelevant": "把参考视角覆盖、里程计先验和检索度量拆开做对照。对稀疏地图尤其值得看其反例：参考视角不足时，按位姿选图不一定胜过外观检索。",
+      "category": "paper",
+      "publishedAt": "2026-11-25",
+      "summaryType": "研究整理",
+      "url": "https://arxiv.org/abs/2611.34932",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.34932",
+        "https://arxiv.org/html/2611.34932v1"
+      ],
+      "verifiedAt": "2026-11-27T03:39:26Z"
+    },
+    {
+      "id": "supernav-15-structured-memory-2611.29912",
+      "title": "SuperNav-1.5：把语义记忆节点接到可执行路线和跨会话重定位",
+      "source": "arXiv · Jiarui Guo 等",
+      "summary": "已查阅正文的记忆构建、跨会话实验和消融，未复现。系统在按区域分割的占据图上维护稀疏语义记忆节点；重访时，智能体先从当前观察与记忆提出区域候选，再由几何匹配把当前位置对齐到旧地图。作者在 Habitat-GS 150 个单目标任务上用相同目标重测：改变起点时，复用记忆相对不复用使成功率从 78% 升至 82%，SPL 从 0.4364 升至 0.5022。依赖深度或 LiDAR 和里程计来构建占据图，并非纯拓扑方案；真机 Go2 示例也不是跨会话统计验证。",
+      "whyRelevant": "可以把区域先验、几何定位和执行路径分开验证：先问语义记忆有没有缩小搜索范围，再问它有没有减少重复探索。适合作为稀疏记忆与占据图混合方案的对照。",
+      "category": "paper",
+      "publishedAt": "2026-11-23",
+      "summaryType": "研究整理",
+      "url": "https://arxiv.org/abs/2611.29912",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.29912",
+        "https://arxiv.org/html/2611.29912v2",
+        "https://zju3dv.github.io/SuperNav-1.5/"
+      ],
+      "verifiedAt": "2026-11-27T03:39:26Z"
+    },
     {
       "id": "roam-bench-evidence-verification-2611.33143",
       "title": "ROAM-Bench：答对了，也要验证探索证据是否齐全",
