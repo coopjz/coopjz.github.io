@@ -13,7 +13,8 @@ import re
 import tempfile
 from urllib.parse import urlsplit
 
-CATEGORIES = {'paper', 'news', 'project'}
+CATEGORY_LIMITS = {'paper': 100, 'news': 50, 'project': 50}
+CATEGORIES = CATEGORY_LIMITS.keys()
 
 def timestamp(value, label):
     if not isinstance(value, str):
@@ -95,8 +96,8 @@ def validate(data, previous=None):
         if set(item) - {'id', 'category', 'title', 'url', 'source', 'summary', 'whyRelevant', 'publishedAt', 'verifiedAt', 'summaryType', 'evidenceUrls', 'updatedAt'}:
             raise ValueError('Unexpected item fields')
         category = item['category']; counts[category] += 1
-        if counts[category] > 50:
-            raise ValueError('Maximum 50 items per category')
+        if counts[category] > CATEGORY_LIMITS[category]:
+            raise ValueError(f'Maximum {CATEGORY_LIMITS[category]} items for category {category}')
         ident = text(item.get('id'), 'id', 200)
         url = canonical(item.get('url'))
         if ident in seen_ids or url in seen_urls:

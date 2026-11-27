@@ -19,7 +19,7 @@ Required root fields:
 - `mode`: `assistant-reviewed`.
 - `updatedAt`: ISO 8601 timestamp with timezone, no earlier than review.
 - `review`: `{ "status": "reviewed", "method": "primary-source-review", "reviewedAt": "2026-11-06T03:36:10Z" }`.
-- `items`: 1–150 items total, at most 50 per category. Empty packages are rejected.
+- `items`: 1–150 items total, at most 100 papers, 50 news items, and 50 projects. Empty packages are rejected.
 
 Every item requires:
 - `id`: stable unique string, max 200 characters.

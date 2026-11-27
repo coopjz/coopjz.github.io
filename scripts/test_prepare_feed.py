@@ -11,6 +11,35 @@ class PackageTests(unittest.TestCase):
     def setUp(self):
         self.data = json.loads(FIXTURE.read_text())
     def test_valid(self): validate(self.data)
+    def _items(self, category, count):
+        return [
+            dict(self.data['items'][0], category=category, id=f'{category}-{i}',
+                 url=f'https://example.com/{category}/{i}',
+                 evidenceUrls=[f'https://example.com/{category}/{i}'])
+            for i in range(count)
+        ]
+    def test_paper_limit(self):
+        for count in (51, 100):
+            with self.subTest(count=count):
+                self.data['items'] = self._items('paper', count)
+                validate(self.data)
+        self.data['items'] = self._items('paper', 101)
+        with self.assertRaisesRegex(ValueError, 'Maximum 100 items for category paper'):
+            validate(self.data)
+    def test_other_category_limits_unchanged(self):
+        for category in ('news', 'project'):
+            with self.subTest(category=category):
+                self.data['items'] = self._items(category, 50)
+                validate(self.data)
+                self.data['items'] = self._items(category, 51)
+                with self.assertRaisesRegex(ValueError, f'Maximum 50 items for category {category}'):
+                    validate(self.data)
+    def test_total_limit_unchanged(self):
+        self.data['items'] = self._items('paper', 100) + self._items('news', 50)
+        validate(self.data)
+        self.data['items'] += self._items('project', 1)
+        with self.assertRaisesRegex(ValueError, '150 reviewed items'):
+            validate(self.data)
     def test_month_precision_preserved(self):
         self.data['items'][0]['publishedAt'] = '2026-10'
         validate(self.data)
