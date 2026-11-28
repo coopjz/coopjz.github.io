@@ -1,13 +1,62 @@
 {
   "schemaVersion": 2,
   "mode": "assistant-reviewed",
-  "updatedAt": "2026-11-27T03:39:26Z",
+  "updatedAt": "2026-11-28T03:34:08Z",
   "review": {
     "status": "reviewed",
     "method": "primary-source-review",
-    "reviewedAt": "2026-11-27T03:39:26Z"
+    "reviewedAt": "2026-11-28T03:34:08Z"
   },
   "items": [
+    {
+      "id": "lingbot-navi-spatial-memory",
+      "title": "LingBot-Navi：为连续导航任务复用三维空间记忆",
+      "source": "Robbyant · GitHub",
+      "summary": "已查阅官方仓库、模型卡和参考评测，未运行。LingBot-Navi 把图像特征锚定在局部重建表面，压缩成空间 token，供目标定位、图像重定位和三维路线预测复用。仓库发布了推理代码，模型卡列出导航模型和局部规划器权重；数据含 511 个真实环境的重建，其中 36 个用于测试。公开闭环参考评测是在重建场景上，不是真机统计；示例及带在线几何的评测配置明确使用 LingBot-Map 1.0，不能把同批介绍的 Map 2.0 全局记忆修订计入这个结果。",
+      "whyRelevant": "适合比较局部三维块与稀疏图如何支持跨任务记忆复用。评测时可分别衡量重定位、目标检索和路线执行，避免把局部规划器的表现归给记忆模块。",
+      "category": "project",
+      "publishedAt": "2026-11-26",
+      "summaryType": "研究整理",
+      "url": "https://github.com/Robbyant/lingbot-navi",
+      "evidenceUrls": [
+        "https://github.com/Robbyant/lingbot-navi",
+        "https://huggingface.co/robbyant/lingbot-navi",
+        "https://github.com/Robbyant/lingbot-map-v2"
+      ],
+      "verifiedAt": "2026-11-28T03:34:08Z"
+    },
+    {
+      "id": "memory-not-ground-truth-2611.34915",
+      "title": "Memory Is Not Ground Truth：VLM 连续漏检时，撤回导航权限而非删除记忆",
+      "source": "arXiv · Sumukh Shrote 等",
+      "summary": "已查阅正文的匹配复访实验与目标选择对照，未复现。系统按视角归并负证据，保留历史观察，但在首次满足条件的负证据后不再把旧位置当作可信的直接导航目标，可用后续严格正证据恢复。作者在 Spot 和 Qwen3-VL-8B 上报告，40 次相邻同类视角复访中，有 36 次维持原验证结果；三个蓝椅视角在椅子仍然可见或被移走时都连续漏检六次。共享一次陈旧记忆历史的三个起点，对照均选旧目标，方法均转向探索前沿；这里只验证了目标选择，没有验证完整自主搜索的成功率或用时。",
+      "whyRelevant": "同视角连拍不能当作多份独立反证。可分别评价系统何时该改去别处找，以及何时才有足够证据判断物体已移走。",
+      "category": "paper",
+      "publishedAt": "2026-11-25",
+      "summaryType": "研究整理",
+      "url": "https://arxiv.org/abs/2611.34915",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.34915",
+        "https://arxiv.org/html/2611.34915v1"
+      ],
+      "verifiedAt": "2026-11-28T03:34:08Z"
+    },
+    {
+      "id": "scene-graph-memory-eqa-2611.34745",
+      "title": "具身问答里的场景图：物体识别更准，不一定留下更多答题证据",
+      "source": "arXiv · Divyansh Pandey、Shubh Garg 等",
+      "summary": "已查阅正文实验设计、主表和局限，未复现。作者在 ProcTHOR 的 200 个测试回合、800 道题中，用固定规则读出场景图，衡量图内证据能否回答问题。加入物体类别校准后，类别 F1 从 48.8% 升到 56.3%，可答率点估计却从 36.2% 变为 35.2%。使用模拟器真值构图时，同一批记忆帧里的物体如果归入观察者所在房间，可答率为 59.9%；按物体实际所在房间归档则为 80.4%。这不是学习方法的提升幅度；门口分段使用真值穿门事件，且开发时看过部分测试数据，结果属探索性。",
+      "whyRelevant": "保留观察点和物体归属房间两个字段，并把不确定归属标为未知。比起只看图的识别分数，更值得单独测跨门观察、漏检和同类物体计数。",
+      "category": "paper",
+      "publishedAt": "2026-11-25",
+      "summaryType": "研究整理",
+      "url": "https://arxiv.org/abs/2611.34745",
+      "evidenceUrls": [
+        "https://arxiv.org/abs/2611.34745",
+        "https://arxiv.org/html/2611.34745v1"
+      ],
+      "verifiedAt": "2026-11-28T03:34:08Z"
+    },
     {
       "id": "merloc-pose-retrieval-2611.34932",
       "title": "MERLoc：用位姿先验检索渲染视图，减少动态场景重定位误差",
